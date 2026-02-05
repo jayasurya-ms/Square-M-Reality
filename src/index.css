@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+.btn-bg-clr{
+    background-color:#F4FF49 ;
+}
+.btn-text-clr{
+  color: #F4FF49;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+@keyframes bounce-down-clash {
+  0% { transform: translateY(-100vh); }
+  /* 1st Impact (The biggest) */
+  30% { transform: translateY(15%); } 
+  /* 1st Rebound */
+  45% { transform: translateY(-8%); }
+  /* 2nd Impact (Smaller) */
+  60% { transform: translateY(4%); }
+  /* 2nd Rebound */
+  75% { transform: translateY(-2%); }
+  /* 3rd Impact (Micro) */
+  85% { transform: translateY(1%); }
+  /* Settle */
+  100% { transform: translateY(0); }
+}
+
+@keyframes bounce-up-clash {
+  0% { transform: translateY(100vh); }
+  /* 1st Impact */
+  30% { transform: translateY(-15%); }
+  /* 1st Rebound */
+  45% { transform: translateY(8%); }
+  /* 2nd Impact */
+  60% { transform: translateY(-4%); }
+  /* 2nd Rebound */
+  75% { transform: translateY(2%); }
+  /* 3rd Impact */
+  85% { transform: translateY(-1%); }
+  /* Settle */
+  100% { transform: translateY(0); }
+}
+
+.ani-top {
+  /* Increased duration slightly to 1.5s to fit all 3 bounces nicely */
+  animation: bounce-down-clash 1.5s cubic-bezier(0.36, 0, 0.66, -0.56) forwards;
+}
+
+.ani-bot {
+  animation: bounce-up-clash 1.5s cubic-bezier(0.36, 0, 0.66, -0.56) forwards;
+}
+
+/* Base reveal class */
+.reveal {
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* TOP DIV: Starts above */
+.reveal-top-start {
+  transform: translateY(-100px);
+}
+
+/* BOTTOM DIV: Starts below */
+.reveal-bot-start {
+  transform: translateY(100px);
+}
+
+/* Active state triggered by hover */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

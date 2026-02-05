@@ -1,0 +1,63 @@
+#projects-section{
+    background-color: black;
+    padding: 50px;
+    overflow: hidden;
+}
+.projects-title{
+    font-size: 20px;
+}
+.projects-des{
+    font-size: 40px;
+}
+/* rpoject card */
+.projects-mid{
+    height: 100%;
+    width: 100%;
+    /* background-color: darkred; */
+}
+.projects-mid1, .projects-mid2, .projects-mid3{
+    width: 1111px;
+    height: 430px;
+    /* background-color: lawngreen; */
+    border-radius: 20px;
+}
+.projects-bot > a{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    background-color: #F4FF49;
+}
+.projects-bot-arrow{
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    border-radius: 19px;
+}
+
+@media (max-width: 1024px){
+    #projects-section{
+        padding: 20px;
+    }
+    .projects-title{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .projects-des{
+        font-size: 32px;
+    }
+}
+@media (max-width: 576px){
+    .projects-title{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .projects-des{
+        font-size: 20px;
+    }
+    .projects-mid1, .projects-mid2, .projects-mid3{
+        width: 100%;
+        height: 230px;
+        /* background-color: lawngreen; */
+        border-radius: 20px;
+    }
+}

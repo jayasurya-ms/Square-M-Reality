@@ -1,0 +1,83 @@
+/* Container alignment */
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    /* This ensures that in the Hero's flex container, 
+       the navbar can be pushed to the right if needed */
+    margin-left: auto; 
+    z-index: 2000;
+}
+
+.nav-links-list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.nav-links-list > li > a{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-links-list a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Readex Pro', sans-serif;
+    font-size: 18px;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Mobile Alignment Logic */
+@media (max-width: 992px) {
+    .navbar-wrapper {
+        /* Forces the navbar container to the right of its parent */
+        justify-content: flex-end; 
+        width: auto;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+        z-index: 2100;
+        /* Ensures the icon itself is pushed right */
+        margin-left: auto; 
+    }
+
+    /* Animation for 'X' */
+    .line.active:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .line.active:nth-child(2) { opacity: 0; }
+    .line.active:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+
+    .nav-links-list {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        /* width: 250px; */
+        height: 100vh;
+        background-color: #111;
+        flex-direction: column;
+        justify-content: start;
+        padding: 50px 40px;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Added a slight spring */
+        z-index: 10;
+    }
+
+    .nav-links-list.mobile-open {
+        right: 0;
+    }
+}

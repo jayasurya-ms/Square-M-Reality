@@ -1,0 +1,122 @@
+.footer{
+    height: 480px;
+    width: 100%;
+    background-color: black;
+}
+.footer1, .footer2, .footer3{
+    /* width: 30%; */
+    height: 80%;
+    padding: 0;
+    /* background-color: aquamarine; */
+}
+.footer1 > div{
+    width: 80%;
+    height: 75%;
+    margin-left: 70px;
+}
+.footer1-title{
+    font-size: 30px;
+}
+.footer1-des{
+    font-size: 20px;
+}
+.footer1 > span, .footer3 > span{
+    width: 2px;
+}
+.footer2 > div{
+    width: 45%;
+}
+.footer-nav1 > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.footer-nav2 > ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.footer3 > div{
+    width: 80%;
+    height: 75%;
+    margin-right: 70px;
+}
+.footer3-phone{
+    font-size: 30px;
+    font-weight: bold;
+}
+.footer3-email{
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.footer3-social-media{
+    font-size: 18px;
+}
+.footer3-social-media > a{
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 1024px){
+    .footer1 > div, .footer3 > div{
+        margin: auto;
+    }
+        .footer-nav1 > ul > li > a{
+        font-size: 16px;
+    }
+    .footer2{
+        height: 70%;
+    }
+    .footer-nav2 > ul > li > a{
+        font-size: 16px;
+    }
+    .footer3-phone{
+        font-size: 25px;
+    }
+    .footer3-email{
+        font-size: 18px;
+        padding: 0;
+    }
+    .footer3-social-media{
+        font-size: 16px;
+    }
+}
+@media (max-width: 576px){
+    .footer1 > span, .footer3 > span{
+        display: none;
+    }
+    .footer1 > div, .footer3 > div{
+        margin: auto;
+        height: auto;
+    }
+    .footer1, .footer3{
+        height: 30%;
+        padding: 10px;
+    }
+    .footer2{
+        height: 80%;
+        margin: 20px 0;
+    }
+    .footer-nav1 > ul > li > a{
+        font-size: 17px;
+    }
+    .footer-nav2 > ul > li > a{
+        font-size: 17px;
+    }
+    .footer3-phone{
+        font-size: 25px;
+    }
+    .footer3-email{
+        font-size: 18px;
+        padding: 0;
+    }
+    .footer3-social-media{
+        font-size: 16px;
+    }
+    .footer{
+        height: 100%;
+    }
+    .footer3 > div{
+        gap: 30px;
+    }
+}

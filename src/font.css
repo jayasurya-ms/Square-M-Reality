@@ -1,0 +1,16 @@
+@font-face {
+    font-family:rasa ;
+    src: url('./assets/font/Rasa-Medium.ttf') format('truetype');
+    font-style: normal;
+}
+.rasa{
+    font-family: 'rasa';
+}
+@font-face {
+    font-family: readex;
+    src: url('./assets/font/ReadexPro-Medium.ttf') format('truetype');
+    font-style: normal;
+}
+.readex{
+    font-family: 'readex';
+}

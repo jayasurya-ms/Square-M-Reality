@@ -37,9 +37,9 @@ const reviews = [
 function TestimonialsReview() {
 
   return (
-    <div id='testimonialsreview-section' className='d-flex align-items-center justify-content-center'>
+    <div id='testimonialsreview-section' className='d-flex align-items-center justify-content-center pt-10!'>
       <div className='treview d-flex flex-column gap-3'>
-        <div className='treview-top d-flex align-items-center justify-content-center border border-2 rounded-pill'>
+        <div className='treview-top d-flex align-items-center justify-content-center border-2 rounded-pill'>
           <span className='text-light readex'>Testimonials</span>
         </div>
         <div className='treview-mid row p-0 m-0'>

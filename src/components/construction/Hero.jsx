@@ -6,7 +6,7 @@ import Arrow from '../../icon/Arrow'
 function Hero() {
   return (
     /* Added overflow-hidden to parent to ensure we don't see the divs while they are off-screen */
-    <div id='c-hero' className='lg:h-202 xl:h-256 md:h-139 max-sm:h-75 w-full'>
+    <div id='c-hero' className='lg:h-202 xl:h-256 md:h-139 max-sm:h-75 overflow-x-clip w-full'>
       <div className='flex flex-col justify-between size-full bg-[url(src/assets/images/c-hero.png)] bg-cover bg-center'>
         
         {/* TOP DIV: Slides from above */}

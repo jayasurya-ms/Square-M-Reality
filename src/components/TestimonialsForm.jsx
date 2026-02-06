@@ -5,8 +5,8 @@ import Form from './Form'
 
 function TestimonialsForm() {
   return (
-    <div id='testimonialsform-section' className='h-full w-full'>
-        <div className='tform row d-flex h-100 w-100 p-0 m-0 flex justify-center items-center '>
+    <div id='testimonialsform-section' className='mb-10! mt-10!'>
+        <div className='tform row d-flex h-100 w-100 p-0 m-0 flex justify-center items-center'>
             <div className='tform1 col-sm-12 col-md-6 d-flex flex-column align-items-center'>
                 <div className='w-75 h-50 d-flex align-items-end'>
                     <span className='tform-text d-flex justify-content-center align-items-center readex border-2 rounded-pill border-dark m-1'>Testimonials</span>
@@ -15,7 +15,7 @@ function TestimonialsForm() {
                     <span className='tform-title readex'>We'd Love To Hear <br />From You</span>
                 </div>
             </div>
-            <div className='h-50 w-50 max-sm:w-full! max-sm:h-full'>
+            <div className='h-60 w-50 max-sm:w-full! max-sm:h-full '>
                 <Form/>
             </div>
             <div className='tform3 col-sm-12 col-md-12 d-flex justify-content-center align-items-center position-relative flex-column'>

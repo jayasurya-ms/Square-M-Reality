@@ -14,3 +14,17 @@
 .readex{
     font-family: 'readex';
 }
+@font-face {
+    font-family: inter;
+    src: url('./assets/font/Inter_18pt-Regular.ttf') format('truetype');
+}
+.inter{
+    font-family: inter;
+}
+@font-face {
+    font-family: Solitreo;
+    src: url('./assets/font/Solitreo-Regular.ttf') format('truetype');
+}
+.Solitreo{
+    font-family: Solitreo;
+}

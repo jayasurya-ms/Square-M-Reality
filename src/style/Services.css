@@ -63,6 +63,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    margin-left: 17%;
 }
 
 .card {
@@ -276,7 +277,6 @@
     justify-content: space-between;
 }
 .card-div-right > span{
-    background-color: #F4FF49;
     width: 20px;
     height: 8px;
 }

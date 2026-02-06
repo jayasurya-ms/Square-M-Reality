@@ -3,7 +3,7 @@ import '../style/Hero.css'
 import Navbar from './Navbar'
 
 import Globe from '../icon/Globe'
-import Location from '../icon/location'
+import Location from '../icon/Location'
 import Phone from '../icon/Phone'
 import Arrow from '../icon/Arrow'
 import Play from '../icon/Play'

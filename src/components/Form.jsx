@@ -10,12 +10,12 @@ function Form() {
             </div>
             <div className='tform-elements row w-100 h-50'>
                 <div className='col-sm-12 col-md-12 col-lg-6 p-0 d-flex flex-column justify-content-evenly align-items-center'>
-                    <input type="text" placeholder='Your Name'/>
-                    <input type="text" placeholder='Phone Number'/>
+                    <input type="text" name='name' placeholder='Your Name'/>
+                    <input type="text" name='phone-number' placeholder='Phone Number'/>
                 </div>
                 <div className='col-sm-12 col-md-12 p-0 col-lg-6 d-flex flex-column justify-content-evenly align-items-center'>
-                    <input type="text" placeholder='Email'/>
-                    <input type="text" placeholder='Your Enquiry About'/>
+                    <input type="text" name='email' placeholder='Email'/>
+                    <input type="text" name='enquiry' placeholder='Your Enquiry About'/>
                 </div>
             </div>
         </form>

@@ -25,19 +25,19 @@ function ChooseUs() {
                     <div className='chooseus-right-bot1 d-flex flex-column'>
                         <div className='d-flex flex-coloumn gap-2'>
                             <span className='d-flex justify-content-center align-items-center rounded-circle'><Thumb/></span>
-                            <p className='readex'>corporate<br />resposibility</p>
+                            <p className='readex'>Corporate<br />resposibility</p>
                         </div>
                         <div className='d-flex flex-coloumn gap-2'>
                             <span className='d-flex justify-content-center align-items-center rounded-circle'><Thumb/></span>
-                            <p className='readex'>corporate<br />resposibility</p>
+                            <p className='readex'>Corporate<br />resposibility</p>
                         </div>
                         <div className='d-flex flex-coloumn gap-2'>
                             <span className='d-flex justify-content-center align-items-center rounded-circle'><Thumb/></span>
-                            <p className='readex'>corporate<br />resposibility</p>
+                            <p className='readex'>Corporate<br />resposibility</p>
                         </div>
                         <div className='d-flex flex-coloumn gap-2'>
                             <span className='d-flex justify-content-center align-items-center rounded-circle'><Thumb/></span>
-                            <p className='readex'>corporate<br />resposibility</p>
+                            <p className='readex'>Corporate<br />resposibility</p>
                         </div>
                     </div>
                     <div className='chooseus-right-bot2 d-flex'></div>

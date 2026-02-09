@@ -57,7 +57,7 @@ function Services() {
         <div className='service-top row w-100'>
           <div className='col-sm-12 col-md-6 p-0'>
             <div className='service-top2 d-flex align-items-start w-100'>
-              <span className='service-title Solitreo text-white ps-5 mt-20! w-100'>Services We <br />Offer</span>
+              <span className='service-title solitreo text-white ps-5 mt-20! w-100'>Services We <br />Offer</span>
             </div>
           </div>
           <div className='col-sm-12 col-md-6 p-0'>

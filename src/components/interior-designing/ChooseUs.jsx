@@ -7,7 +7,7 @@ function ChooseUs() {
       <div className='mt-5 mb-5 flex flex-col justify-center items-center'>
         {/* Header Section */}
         <div className='flex xl:flex-row md:flex-col max-sm:flex-col items-center w-[90%] mb-6'>
-          <div className='xl:text-[60px] max-sm:text-[30px] md:text-[35px] Solitreo xl:w-[50%] md:w-full max-sm:w-full'>
+          <div className='xl:text-[60px] max-sm:text-[30px] md:text-[35px] solitreo xl:w-[50%] md:w-full max-sm:w-full'>
             designing spaces, <br />defining style
           </div>
           <div className='xl:text-[18px] max-sm:text-[14px] readex xl:w-[50%] md:w-full max-sm:w-full flex flex-col gap-2'>

@@ -22,9 +22,9 @@
     font-family: inter;
 }
 @font-face {
-    font-family: Solitreo;
+    font-family: solitreo;
     src: url('./assets/font/Solitreo-Regular.ttf') format('truetype');
 }
-.Solitreo{
-    font-family: Solitreo;
+.solitreo{
+    font-family: solitreo;
 }

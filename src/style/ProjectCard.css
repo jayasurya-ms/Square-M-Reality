@@ -13,7 +13,6 @@
     background-image: url('src/assets/images/project-card.png');
 }
 .project-content-div > span{
-    background-color: #F4FF49;
     width: 60px;
     height: 60px;
     top: 89%;
@@ -21,7 +20,6 @@
     border-radius: 30px;
 }
 .card-status{
-    background-color: #F4FF49;
     width: 113px;
     height: 30px;
     font-size: 14px;

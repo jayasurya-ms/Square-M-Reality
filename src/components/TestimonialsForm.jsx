@@ -16,7 +16,7 @@ function TestimonialsForm() {
                 </div>
             </div>
             <div className='h-60 w-50 max-sm:w-full! max-sm:h-full '>
-                <Form/>
+                <Form tcolor={'black'}/>
             </div>
             <div className='tform3 col-sm-12 col-md-12 d-flex justify-content-center align-items-center position-relative flex-column'>
                 <img src="src/assets/images/tform.png" alt="Background image"/>

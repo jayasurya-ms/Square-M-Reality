@@ -1,5 +1,4 @@
 #projects-section{
-    background-color: black;
     padding: 50px;
     overflow: hidden;
 }
@@ -24,8 +23,6 @@
 .projects-bot > a{
     font-size: 14px;
     text-decoration: none;
-    color: black;
-    background-color: #F4FF49;
 }
 .projects-bot-arrow{
     width: 38px;

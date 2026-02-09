@@ -11,13 +11,10 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/construction' element={<Construction />}/>
-      <Route path='/projects' element={<Projects />} />
       <Route path='/interior-designing' element={<InteriorDesigning />} />
+      <Route path='/projects' element={<Projects />} />
     </Routes>
     </BrowserRouter>
-    // <>
-    // <Projects />
-    // </>
   )
 }
 

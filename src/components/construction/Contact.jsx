@@ -16,7 +16,7 @@ function Contact() {
         </div>
         <div className=' xl:w-[40%] h-full max-sm:w-full'>
             <div className=' w-full flex h-50'>
-                <Form />
+                <Form tcolor={'black'}/>
             </div>
             <div className=''>
                 <div className=' flex xl:justify-between md:justify-center md:gap-2 items-center max-sm:w-full max-sm:flex max-sm:flex-col max-sm:gap-3'>

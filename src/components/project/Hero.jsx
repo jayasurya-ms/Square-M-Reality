@@ -1,21 +1,23 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import Projects from './Projects'
+import { Link } from 'react-router-dom';
+
 
 function Hero() {
   return (
     <div id='p-hero-section' className='min-h-screen w-full flex'>
       <div className='p-hero relative size-full flex flex-col'>
-        <div className='absolute bg-[url(src/assets/images/p-hero.png)] size-full bg-cover bg-no-repeat bg-center flex -z-1'></div>
-        <div className='h-22  w-full flex justify-between items-center'>
+        <div className='absolute bg-[url(/src/assets/images/p-hero.png)] size-full bg-cover bg-no-repeat bg-center flex -z-1'></div>
+        <div className='h-22  w-full flex justify-between items-center p-4! mt-2'>
           <div className=''>
-            <img src="src/assets/images/logo.png" alt="logo" className='h-17.5 w-17.5'/>
+            <img src="/src/assets/images/logo.png" alt="logo" className='h-17.5 w-17.5'/>
           </div>
           <div className='h-full xl:w-290'>
             <Navbar />
           </div>
           <div className='h-full w-56 xl:flex justify-center items-center hidden'>
-            <a href="" className='flex justify-center items-center btn-bg-clr w-39 h-12.5 gap-1 rounded-full no-underline! readex text-black! '>Get In Touch</a>
+            <Link to="" className='flex justify-center items-center btn-bg-clr w-39 h-12.5 gap-1 rounded-full no-underline! readex text-black! '>Get In Touch </Link>
           </div>
         </div>
     

@@ -1,7 +1,8 @@
 import React from 'react'
 import '../style/TestimonialsReview.css'
 import UpArrow from '../icon/UpArrow'
-import { div } from 'framer-motion/client'
+import { Link } from 'react-router-dom';
+
 
 const reviews = [
   {
@@ -47,10 +48,10 @@ function TestimonialsReview() {
             <span>Discover What <br />Our Customer Say</span>
           </div>
           <div className='treview-mid-text2 col-sm-12 col-md-6 col-lg-6 m-0 d-flex justify-content-end align-items-end'>
-            <div className='treview-mid-link d-flex align-items-center justify-content-center'>
-              <a href="" className='text-decoration-none readex text-dark d-flex align-items-center justify-content-center gap-2'>View All 
+            <div className='treview-mid-Link  d-flex align-items-center justify-content-center'>
+              <Link to="" className='text-decoration-none readex text-dark d-flex align-items-center justify-content-center gap-2'>View All 
                 <span className='d-flex justify-content-center align-items-center '><UpArrow /></span>
-              </a>
+               </Link>
             </div>
           </div>
         </div>

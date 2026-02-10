@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../Navbar'
 import Play from '../../icon/Play'
 import Arrow from '../../icon/Arrow'
+import { Link } from 'react-router-dom';
+
 
 function Hero() {
   return (
@@ -10,17 +12,17 @@ function Hero() {
       <div className='flex flex-col justify-between size-full bg-[url(src/assets/images/c-hero.png)] bg-cover bg-center'>
         
         {/* TOP DIV: Slides from above */}
-        <div className='ani-top xl:h-25 w-full flex ps-4 pt-1 z-10 max-sm:justify-between md:justify-between max-sm:h-10'>
-            <div className='xl:h-full xl:w-25'>
+        <div className='ani-top xl:h-25 w-full flex ps-4 pt-1 z-10 max-sm:justify-evenly md:justify-evenly max-sm:h-10 items-center'>
+            <div className='xl:h-full xl:w-25 flex justify-center items-center'>
                 <img src="src/assets/images/logo.png" alt="Logo" className='size-22 max-sm:size-10 md:size-18'/>
             </div>
             <div className='xl:h-full xl:w-275 '>
                 <Navbar />
             </div>
             <div className='xl:h-full xl:w-55 xl:flex justify-end items-center md:hidden max-sm:hidden'>
-                <a href="#" className='h-12.5 w-39 rounded-full btn-bg-clr flex items-center justify-center no-underline! text-[18px] readex text-black!'>
+                <Link to="#" className='h-12.5 w-39 rounded-full btn-bg-clr flex items-center justify-center no-underline! text-[18px] readex text-black!'>
                   <span>Get In Touch</span>
-                </a>
+                 </Link >
             </div>
         </div>
 
@@ -34,10 +36,10 @@ function Hero() {
                     <span>Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой</span>
                 </div>
                 <div className='flex items-center justify-center xl:mt-4'>
-                    <a href="#" className='w-fit no-underline! text-black! flex items-center justify-center rounded-full bg-white p-1 ps-3 pe-3 gap-2'>
+                    <Link to="#" className='w-fit no-underline! text-black! flex items-center justify-center rounded-full bg-white p-1 ps-3 pe-3 gap-2'>
                         <span className='max-sm:text-[10px] '>View All Services</span>
                         <span className='xl:size-9.5 max-sm:size-4 btn-bg-clr flex items-center justify-center rounded-full'><Arrow size={24}/></span>
-                    </a>
+                     </Link>
                 </div>
             </div>
             
@@ -48,10 +50,10 @@ function Hero() {
                     <span className='xl:text-[18px] max-sm:text-[10px] md:text-[14px] font-semibold readex text-white'>Years Of <br />Experience</span>
                 </div>
                 <div>
-                    <a href="#" className='xl:w-42.75 xl:h-16.5 max-sm:w-20 max-sm:h-10 md:h-13 md:w-30 bg-[url(src/assets/images/hero-bg.png)] no-underline! text-white! flex flex-col items-center justify-center bg-center bg-cover rounded-full'>
+                    <Link to="#" className='xl:w-42.75 xl:h-16.5 max-sm:w-20 max-sm:h-10 md:h-13 md:w-30 bg-[url(src/assets/images/hero-bg.png)] no-underline! text-white! flex flex-col items-center justify-center bg-center bg-cover rounded-full'>
                         <span className='max-sm:size-6'><Play /></span>
                         <span className='max-sm:text-[9px]'>Watch Now</span>
-                    </a>
+                     </Link>
                 </div>
             </div>
         </div>

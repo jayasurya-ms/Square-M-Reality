@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 
 function ContactUs() {
   return (
-    <div id='i-contactus-section' className='xl:h-screen md:h-screen max-sm:h-auto w-full bg-lime-500'>
-      <div className="size-full bg-[url(src/assets/images/i-form-bg.png)] bg-cover bg-center flex max-sm:flex-col max-sm:pt-10! max-sm:pb-10!">
-        <div className=' xl:w-[50%] xl:h-full md:w-[50%] md:h-full max-sm:w-full max-sm:h-auto flex justify-center items-center'>
+    <div id='i-contactus-section' className='xl:h-screen md:h-screen max-sm:h-auto w-full'>
+      <div className="size-full bg-[url(src/assets/images/r-contact.jpg)] bg-cover bg-left flex max-sm:flex-col max-sm:pt-10! max-sm:pb-10! relative">
+      <div className='bg-black/40 absolute inset-0 z-0'></div>
+        <div className=' xl:w-[50%] xl:h-full md:w-[50%] md:h-full max-sm:w-full max-sm:h-auto flex justify-center items-center z-1'>
           <div className=" xl:h-[95%] xl:w-[54%] md:h-[90%] md:w-[80%] max-sm:w-full max-sm:h-131 bg-[url(src/assets/images/i-form-div.png)] bg-contain bg-no-repeat bg-center flex justify-center items-center">
             <div className=" xl:size-[85%] md:size-[85%] max-sm:h-[90%] max-sm:w-[70%] flex flex-col gap-4">
               <div className=' flex justify-center items-center'>
@@ -33,13 +34,13 @@ function ContactUs() {
             </div>
           </div>
         </div>
-        <div className=' xl:w-[50%] xl:h-full md:w-[50%] md:h-full max-sm:w-full max-sm:h-auto flex items-end'>
-          <div className=' xl:h-[70%] md:h-[94%] xl:w-[90%] md:w-[90%] max-sm:w-full'>
-            <div className=' xl:h-[90%] md:h-auto w-full'>
-              <div className=' h-[90%] w-full text-white'>
-                <Form tcolor={'#5A3523'}/>
+        <div className=' xl:w-[50%] xl:h-full md:w-[50%] md:h-full max-sm:w-full max-sm:h-auto flex items-end z-1 '>
+          <div className=' xl:h-[70%] md:h-[94%] xl:w-[90%] md:w-[90%] max-sm:w-full z-1'>
+            <div className=' xl:h-[90%] md:h-auto w-full z-1'>
+              <div className=' h-[90%] w-full text-white ' >
+                <Form tcolor={'black'}/>
               </div>
-              <span className='flex xl:justify-around items-center md:justify-center md:flex-col md:gap-3 max-sm:flex-col max-sm:gap-2'>we are excited to connect with you< Link  to="" className='bg-black xl:h-10 w-51 flex rounded-full justify-center items-center no-underline! text-white gap-1'>Get A Call Back <span className='bg-white rounded-full flex justify-center items-center'><Arrow /></span> </Link ></span>
+              <span className='text-white flex xl:justify-around items-center md:justify-center md:flex-col md:gap-3 max-sm:flex-col max-sm:gap-2'>we are excited to connect with you< Link  to="" className='bg-black xl:h-10 w-51 flex rounded-full justify-center items-center no-underline! text-white gap-1'>Get A Call Back <span className='bg-white rounded-full flex justify-center items-center'><Arrow /></span> </Link ></span>
             </div>
           </div>
         </div>

@@ -54,7 +54,8 @@ function Services() {
   };
 
   return (
-    <div id='i-services-section' className='bg-[url(src/assets/images/i-service-bg.png)] bg-cover bg-center overflow-hidden xl:h-screen  max-sm:h-full'>
+    <div id='i-services-section' className='bg-[url(src/assets/images/real-estate.jpg)] bg-cover bg-center overflow-hidden xl:h-screen  max-sm:h-full relative'>
+      <div className='absolute inset-0 bg-black/30 '></div>
       <div className='services h-100 w-100 d-flex flex-column align-items-center justify-content-center'>
         <div className='service-top row w-100'>
           <div className='col-sm-12 col-md-6 p-0'>
@@ -115,7 +116,7 @@ function Services() {
                   {Array.from({ length: 24 }, (_, i) => (
                     <span 
                       key={i} 
-                      className={`${i % 8 < 4 ? 'bg-[#5F3402]' : 'bg-[#7A5F40]'}`} 
+                      className={`${i % 8 < 4 ? 'bg-[#305297]' : 'bg-[#99bcdb]'}`} 
                     />
                   ))}
                   </div>

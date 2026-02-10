@@ -1,5 +1,7 @@
 import React from 'react'
 import '../style/Footer.css'
+import { Link } from 'react-router-dom';
+
 
 function Footer() {
   return (
@@ -16,23 +18,23 @@ function Footer() {
                 <div className='d-flex justify-content-center align-items-center'>
                     <nav className='footer-nav1 h-75'>
                         <ul className='d-flex w-100 h-100 justify-content-between readex list-unstyled flex-column'>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Why Choose Us</a></li>
-                            <li><a href="">About Us</a></li>
-                            <li><a href="">Construction</a></li>
-                            <li><a href="">Real Estate</a></li>
-                            <li><a href="">Interior Designing</a></li>
+                            <li><Link to="">Home </Link></li>
+                            <li><Link to="">Why Choose Us </Link></li>
+                            <li><Link to="">About Us </Link></li>
+                            <li><Link to="">Construction </Link></li>
+                            <li><Link to="">Real Estate </Link></li>
+                            <li><Link to="">Interior Designing </Link></li>
                         </ul>
                     </nav>
                 </div>
                 <div className='d-flex justify-content-center align-items-center'>
                     <nav className='footer-nav2 h-75'>
                         <ul className='d-flex w-100 h-100 justify-content-between readex list-unstyled flex-column'>
-                            <li><a href="">Support</a></li>
-                            <li><a href="">Term & Conditions</a></li>
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">New 7 Updates</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li><Link to="">Support </Link></li>
+                            <li><Link to="">Term & Conditions </Link></li>
+                            <li><Link to="">Privacy Policy </Link></li>
+                            <li><Link to="">New 7 Updates </Link></li>
+                            <li><Link to="">Contact </Link></li>
                         </ul>
                     </nav>
                 </div>
@@ -46,12 +48,12 @@ function Footer() {
                     </div>
                     <div className='footer3-bot w-50 d-flex gap-3 readex'>
                         <div className='footer3-social-media d-flex flex-column gap-3'>
-                            <a href="">Facebook</a>
-                            <a href="">Twitter</a>
+                            <Link to="">Facebook </Link>
+                            <Link to="">Twitter </Link>
                         </div>
                         <div className='footer3-social-media d-flex flex-column gap-3'>
-                            <a href="">Instagram</a>
-                            <a href="">Youtube</a>
+                            <Link to="">Instagram </Link>
+                            <Link to="">Youtube </Link>
                         </div>
                     </div>
                 </div>

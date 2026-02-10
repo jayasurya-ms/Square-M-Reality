@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function AboutUs() {
   // Logic: isInView is now toggled by mouse events
@@ -25,9 +26,12 @@ function AboutUs() {
                   Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой
                 </span>
                 <span className='flex justify-start w-9/12'>
-                  <a href="#" className='text-white bg-black xl:w-39.5 xl:h-12.5 xl:text-[18px] max-sm:text-[13px] max-sm:w-30.5 max-sm:h-8.5 md:text-[15px] md:h-10 md:w-30 readex rounded-full flex justify-center items-center no-underline! '>
+                  <Link  to="#" className='text-white bg-black xl:w-39.5 xl:h-12.5 xl:text-[18px] max-sm:text-[13px] max-sm:w-30.5 max-sm:h-8.5 md:text-[15px] md:h-10 md:w-30 readex rounded-full flex justify-center items-center no-underline! '>
                     Get In Touch
-                  </a>
+                   </Link >
+                   <Link>
+                   
+                   </Link>
                 </span>
               </div>
             </div>

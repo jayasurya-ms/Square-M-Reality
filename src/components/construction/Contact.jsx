@@ -1,6 +1,8 @@
 import React from 'react'
 import Arrow from '../../icon/Arrow'
 import Form from '../../components/Form'
+import { Link } from 'react-router-dom';
+
 
 function Contact() {
   return (
@@ -21,7 +23,7 @@ function Contact() {
             <div className=''>
                 <div className=' flex xl:justify-between md:justify-center md:gap-2 items-center max-sm:w-full max-sm:flex max-sm:flex-col max-sm:gap-3'>
                     <span className='readex xl:text-[18px] text-gray-500'>We Are Excited To Connect With You</span>
-                    <a href="" className='btn-bg-clr w-48.5 h-10 flex flex-row! gap-2 justify-center items-center no-underline! text-black! readex rounded-full'>Get A Call Back <span className='bg-white xl:size-7.5 max-sm:size-5 flex justify-center items-center rounded-full'><Arrow /></span></a>
+                    <Link to="" className='btn-bg-clr w-48.5 h-10 flex flex-row! gap-2 justify-center items-center no-underline! text-black! readex rounded-full'>Get A Call Back <span className='bg-white xl:size-7.5 max-sm:size-5 flex justify-center items-center rounded-full'><Arrow /></span> </Link >
                 </div>
             </div>
         </div>

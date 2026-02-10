@@ -7,6 +7,9 @@ import Location from '../icon/Location'
 import Phone from '../icon/Phone'
 import Arrow from '../icon/Arrow'
 import Play from '../icon/Play'
+import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion'
+
 
 function Hero() {
   return (
@@ -32,12 +35,17 @@ function Hero() {
             <img src="src/assets/images/logo.png" alt="logo" className='h-100 w-100' />
           </div>
 
-          <div className='hero-mid1-div2 h-100 readex'>
+          <motion.div
+            className='hero-mid1-div2 h-100 readex'
+            initial={{opacity: 0, y: -100}}
+            animate={{opacity: 1, y: 0}}
+            transition={{ duration: 0.8, delay: 0.3}}
+            >
             <Navbar />
-          </div>
+          </motion.div>
 
           <div className='hero-mid1-div3 h-100 align-items-center justify-content-center pe-4'>
-            <a href='' className='rounded-pill border-0 p-2 pe-4 ps-4 readex'> Get In Touch </a>
+            <Link to='' className='rounded-pill border-0 p-2 pe-4 ps-4 readex'> Get In Touch  </Link>
           </div>
          </div>
 
@@ -52,12 +60,12 @@ function Hero() {
          </div>
 
          <div className='hero-mid4 d-flex align-items-center ms-5 ps-3'>
-          <a href='' className='d-flex rounded-pill border-0 p-2 pe-4 ps-4 align-items-center justify-content-center gap-2 readex'>
+          <Link to='' className='d-flex rounded-pill border-0 p-2 pe-4 ps-4 align-items-center justify-content-center gap-2 readex'>
             <div>View all Services</div>
             <div className='hero-mid4-arrow rounded-circle d-flex p-1 justify-content-center'>
               <Arrow size={23}/>
             </div>
-          </a> 
+           </Link> 
          </div>
 
          <div className='hero-mid5 d-flex align-items-center ms-5'>

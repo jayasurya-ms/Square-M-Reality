@@ -1,6 +1,8 @@
 import React from 'react'
 import UpArrow from '../../icon/UpArrow'
 import Location from '../../icon/Location'
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const projectData = [
     {
@@ -10,6 +12,7 @@ const projectData = [
         des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
         loc: 'Bangalore',
         img: 'src/assets/images/p-project1.png',
+        slug: 'greenview-appartments'
     },
     {
         id: 2,
@@ -18,6 +21,7 @@ const projectData = [
         des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
         loc: 'Bangalore',
         img: 'src/assets/images/p-project2.png',
+        slug: 'greenview-appartments'
     },
     {
         id: 3,
@@ -26,6 +30,7 @@ const projectData = [
         des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
         loc: 'Bangalore',
         img: 'src/assets/images/p-project3.png',
+        slug: 'greenview-appartments'
     },
     {
         id: 4,
@@ -34,6 +39,7 @@ const projectData = [
         des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
         loc: 'Bangalore',
         img: 'src/assets/images/p-project4.png',
+        slug: 'greenview-appartments'
     },
     {
         id: 5,
@@ -42,6 +48,7 @@ const projectData = [
         des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
         loc: 'Bangalore',
         img: 'src/assets/images/p-project5.png',
+        slug: 'greenview-appartments'
     },
     {
         id: 6,
@@ -50,10 +57,13 @@ const projectData = [
         des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
         loc: 'Bangalore',
         img: 'src/assets/images/p-project6.png',
+        slug: 'greenview-appartments'
     },
 ]
 
+
 function Projects() {
+    const navigate = useNavigate();
   return (
     <div className='grid grid-cols-12 grid-rows-12 w-full h-full xl:gap-15 max-sm:gap-3 md:gap-5'>
         {projectData.map((data, index) => {
@@ -73,7 +83,7 @@ function Projects() {
                             </div>
                         </div>
                         <div className='absolute xl:bottom-0 xl:left-49 bottom-4 left-25'>
-                            <a href='' className='bg-[#F4FF49] xl:size-12 size-7 flex rounded-full justify-center items-center'><UpArrow size={32}/></a>
+                            <Link to={`/projects/${data.slug}`}  className='bg-[#F4FF49] xl:size-12 size-7 flex rounded-full justify-center items-center'><UpArrow size={32}/> </Link>
                         </div>
                     </div>
                 </div>

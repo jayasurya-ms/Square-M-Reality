@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import '../style/Services.css'
 import Arrow from '../icon/Arrow.jsx'
 import UpArrow from '../icon/UpArrow.jsx'
+import { Link } from 'react-router-dom';
+
 
 const servicesData = [
   {
@@ -67,7 +69,7 @@ function Services() {
           <div className='col-sm-12 col-md-6 p-0'>
             <div className='service-top3'></div>
             <div className='h-50 d-flex align-items-center justify-content-center gap-2 ps-5'>
-              <div><a className='text-white readex' href="">view all services</a></div>
+              <div><Link className='text-white readex'  to="">view all services </Link ></div>
               <button className='card-prev border-0 rounded-circle d-flex' onClick={handlePrev}><Arrow size={20} /></button>
               <button className='card-next border-0 rounded-circle d-flex' onClick={handleNext}><Arrow size={20} /></button>
             </div>
@@ -98,13 +100,13 @@ function Services() {
                       <div className='card-div-img position-absolute'>
                         <img src={service.img} alt={service.title} className='h-100 w-100' />
                       </div>
-                      <a href={service.button} className='card-button position-absolute text-decoration-none d-flex align-items-center justify-content-center'><UpArrow size={30} /></a>
+                      <Link  to={service.button} className='card-button position-absolute text-decoration-none d-flex align-items-center justify-content-center'><UpArrow size={30} /> </Link >
                     </div>
                     <div className='card-content readex'>
                       <div className='content-title readex'>{service.title}</div>
                       <div className='content-description readex'>{service.description}</div>
                     </div>
-                    <a href='' className='card-viewall readex text-decoration-none d-flex align-items-center justify-content-center p-2'><span>View All</span></a>
+                    <Link to='' className='card-viewall readex text-decoration-none d-flex align-items-center justify-content-center p-2'><span>View All</span> </Link>
                   </div>
                   <div className='card-div-right'>
                     {Array.from({ length: 24 }, (_, i) => (

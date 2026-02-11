@@ -1,26 +1,37 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Location from './../../icon/Location';
 import Phone from './../../icon/Phone';
 import Globe from './../../icon/Globe';
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
+import FormPopUp from '../FormPopUp'
 
 
-function Hero() {
+
+const Hero = () => {
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  
+
   return (
     <div id='i-hero-section' className='bg-[#ECBA89] xl:h-256 w-full max-sm:h-150'>
       <div className='size-full bg-[url(src/assets/images/i-hero.png)] xl:bg-cover xl:bg-center md:bg-cover max-sm:bg-left max-sm:bg-no-repeat flex flex-col justify-between'>
-        <div className=' flex flex-col items-center justify-center p-4'>
-            <div className=' w-[98%] flex justify-between items-center max-sm:bg-[#ECBA89]'>
+        <div className=' flex flex-col items-center justify-center '>
+            <div className='w-full xl:w-[98%] flex justify-between items-center max-sm:bg-[#ECBA89] p-2'>
                 <div>
-                    <img src="src/assets/images/logo.png" alt="logo" className='h-17.5 w-17.5'/>
+                    <a href="/"><img src="src/assets/images/logo.png" alt="logo" className='h-17.5 w-17.5'/></a>
                 </div>
                 <div className='h-full xl:w-290'>
                     <Navbar />
                 </div>
                 <div className='h-full w-56 flex justify-center items-center max-sm:hidden md:hidden xl:flex'>
-                    <Link to="" className='flex justify-center items-center btn-bg-clr w-39 h-12.5 gap-1 rounded-full no-underline! readex text-black! '>Get In Touch </Link>
+                    <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
+                    {/* The Component Call */}
+                    <FormPopUp 
+                      isOpen={isPopupVisible} 
+                      onClose={() => setIsPopupVisible(false)} 
+                    />                
                 </div>
             </div> 
             <div className=' h-120 xl:w-[90%] md:w-[90%] max-sm:w-full'>

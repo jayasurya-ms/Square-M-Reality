@@ -1,28 +1,36 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Play from '../../icon/Play'
 import Arrow from '../../icon/Arrow'
 import { Link } from 'react-router-dom';
+import FormPopUp from '../FormPopUp'
 
 
-function Hero() {
+
+const Hero = () => {
+
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+    
   return (
     /* Added overflow-hidden to parent to ensure we don't see the divs while they are off-screen */
     <div id='c-hero' className='lg:h-202 xl:h-256 md:h-139 max-sm:h-75 overflow-x-clip w-full'>
       <div className='flex flex-col justify-between size-full bg-[url(src/assets/images/c-hero.png)] bg-cover bg-center'>
         
         {/* TOP DIV: Slides from above */}
-        <div className='ani-top xl:h-25 w-full flex ps-4 pt-1 z-10 max-sm:justify-evenly md:justify-evenly max-sm:h-10 items-center'>
+        <div className='ani-top xl:h-25 w-full flex ps-4 pt-1! z-10 max-sm:justify-between md:justify-evenly max-sm:h-10 items-center'>
             <div className='xl:h-full xl:w-25 flex justify-center items-center'>
-                <img src="src/assets/images/logo.png" alt="Logo" className='size-22 max-sm:size-10 md:size-18'/>
+                <a href="/"><img src="src/assets/images/logo.png" alt="Logo" className='size-22 max-sm:size-10 md:size-18'/></a>
             </div>
             <div className='xl:h-full xl:w-275 '>
                 <Navbar />
             </div>
             <div className='xl:h-full xl:w-55 xl:flex justify-end items-center md:hidden max-sm:hidden'>
-                <Link to="#" className='h-12.5 w-39 rounded-full btn-bg-clr flex items-center justify-center no-underline! text-[18px] readex text-black!'>
-                  <span>Get In Touch</span>
-                 </Link >
+                <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
+                {/* The Component Call */}
+                <FormPopUp 
+                  isOpen={isPopupVisible} 
+                  onClose={() => setIsPopupVisible(false)} 
+                />
             </div>
         </div>
 
@@ -35,12 +43,7 @@ function Hero() {
                 <div className='max-sm:w-full ps-2 text-white xl:text-[18px] max-sm:text-[8px] md:text-[15px]'>
                     <span>Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой</span>
                 </div>
-                <div className='flex items-center justify-center xl:mt-4'>
-                    <Link to="#" className='w-fit no-underline! text-black! flex items-center justify-center rounded-full bg-white p-1 ps-3 pe-3 gap-2'>
-                        <span className='max-sm:text-[10px] '>View All Services</span>
-                        <span className='xl:size-9.5 max-sm:size-4 btn-bg-clr flex items-center justify-center rounded-full'><Arrow size={24}/></span>
-                     </Link>
-                </div>
+                
             </div>
             
             <div className='xl:h-25 w-11/12 max-sm:h-10 md:h-15 flex justify-between pb-8'>

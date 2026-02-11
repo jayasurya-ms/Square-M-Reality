@@ -77,7 +77,7 @@
 
 /* Active card (center) */
 .card.active {
-    z-index: 10;
+    z-index: 5;
     opacity: 1;
     transform: translateX(0) scale(1);
     left: 50%;

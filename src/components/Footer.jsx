@@ -18,23 +18,23 @@ function Footer() {
                 <div className='d-flex justify-content-center align-items-center'>
                     <nav className='footer-nav1 h-75'>
                         <ul className='d-flex w-100 h-100 justify-content-between readex list-unstyled flex-column'>
-                            <li><Link to="">Home </Link></li>
-                            <li><Link to="">Why Choose Us </Link></li>
-                            <li><Link to="">About Us </Link></li>
-                            <li><Link to="">Construction </Link></li>
-                            <li><Link to="">Real Estate </Link></li>
-                            <li><Link to="">Interior Designing </Link></li>
+                            <li><a href="/">Home </a></li>
+                            <li><a href="">Why Choose Us </a></li>
+                            <li><a href="">About Us </a></li>
+                            <li><a href="/construction">Construction </a></li>
+                            <li><a href="/real-estate">Real Estate </a></li>
+                            <li><a href="/interior-designing">Interior Designing </a></li>
                         </ul>
                     </nav>
                 </div>
                 <div className='d-flex justify-content-center align-items-center'>
                     <nav className='footer-nav2 h-75'>
                         <ul className='d-flex w-100 h-100 justify-content-between readex list-unstyled flex-column'>
-                            <li><Link to="">Support </Link></li>
-                            <li><Link to="">Term & Conditions </Link></li>
-                            <li><Link to="">Privacy Policy </Link></li>
-                            <li><Link to="">New 7 Updates </Link></li>
-                            <li><Link to="">Contact </Link></li>
+                            <li><a href="">Support </a></li>
+                            <li><a href="">Term & Conditions </a></li>
+                            <li><a href="">Privacy Policy </a></li>
+                            <li><a href="">New 7 Updates </a></li>
+                            <li><a href="/contact">Contact </a></li>
                         </ul>
                     </nav>
                 </div>

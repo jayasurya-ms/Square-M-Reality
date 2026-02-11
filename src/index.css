@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .btn-bg-clr{
     background-color:#F4FF49 ;
 }

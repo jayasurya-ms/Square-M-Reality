@@ -10,7 +10,7 @@ const Navbar = ({clr}) => {
   const a_clr = clr? clr : 'white'
 
   return (
-    <nav className='navbar-wrapper readex w-100 h-100'>
+    <nav className='navbar-wrapper readex w-100 h-100 z-10 overflow-hidden'>
       {/* Hamburger icon now wrapped for better alignment */}
       <div className='mobile-menu-icon me-4' onClick={toggleNav}>
         <div className={`line ${isNavOpen ? 'active' : ''}`}></div>
@@ -18,7 +18,7 @@ const Navbar = ({clr}) => {
         <div className={`line ${isNavOpen ? 'active' : ''}`}></div>
       </div>
 
-      <ul className={`nav-links-list readex w-100 ${isNavOpen ? 'mobile-open' : ''} z-20! `}>
+      <ul className={`nav-links-list readex w-100 ${isNavOpen ? 'mobile-open' : ''} z-10 overflow-hidden`}>
         <li onClick={closeNav}><a style={{color:a_clr}} href="/">Home</a></li>
         <li onClick={closeNav}><a style={{color:a_clr}} href="/real-estate">Real Estate</a></li>
         <li onClick={closeNav}><a style={{color:a_clr}} href="/construction">Construction</a></li>

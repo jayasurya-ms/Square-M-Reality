@@ -1,42 +1,32 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import API from '../../api/axiosInstance.js';
 import '../../style/Services.css'
 import Arrow from '../../icon/Arrow.jsx'
 import UpArrow from '../../icon/UpArrow.jsx'
 import { Link } from 'react-router-dom';
 
 
-const servicesData = [
-  {
-    id: 1,
-    title: 'Construction ',
-    description: 'ашиглалтын суурь хураамжа төлөөд явах боломжтой',
-    img: 'src/assets/images/construction-img.png',
-    button: 'A'
-  },
-  {
-    id: 2,
-    title: 'Interior Designing',
-    description: 'ашиглалтын суурь хураамжа төлөөд явах боломжтой',
-    img: 'src/assets/images/interior-img.png',
-    button: 'B'
-  },
-  {
-    id: 3,
-    title: 'Contracting',
-    description: 'ашиглалтын суурь хураамжа төлөөд явах боломжтой',
-    img: 'src/assets/images/contracting-img.png',
-    button: 'C'
-  },
-  {
-    id: 4,
-    title: 'Real Estate',
-    description: 'ашиглалтын суурь хураамжа төлөөд явах боломжтой',
-    img: 'src/assets/images/real-estate-img.png',
-    button: 'D'
-  }
-]
+const Services = () => {
 
-function Services() {
+  const [servicesData, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await API.get('/services/')
+        setData(response.data)
+      } catch (err) {
+        setError("error in fetching")
+        console.log("fetch error :",err)
+      }finally{
+        setLoading(false)
+      }
+    };
+    fetchData();
+  } ,[])
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
@@ -53,6 +43,9 @@ function Services() {
     return (index - currentIndex + total) % total;
   };
 
+  if (loading) return <div className="text-dark p-5 text-center">Loading Projects...</div>;
+  if (error) return <div className="text-danger p-5 text-center">{error}</div>;
+
   return (
     <div id='i-services-section' className='bg-[url(src/assets/images/i-service-bg.png)] bg-cover bg-center overflow-hidden xl:h-screen  max-sm:h-full'>
       <div className='services h-100 w-100 d-flex flex-column align-items-center justify-content-center'>
@@ -68,7 +61,6 @@ function Services() {
                 <span className='xl:w-[90%] max-sm:w-[80%] md:w-[70%] p-1 text-white'>
                   Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой
                 </span>
-                <span className='xl:text-[18px] max-sm:text-[14px] readex bg-black text-white flex justify-center items-center rounded-full h-12.5 w-39'>Get In Touch</span>
               </div>
             </div>
             <div className='h-50 md:flex max-sm:flex align-items-center justify-content-center gap-2 ps-5 xl:hidden max-sm:mt-15! md:mt-5!'>
@@ -101,15 +93,15 @@ function Services() {
                   <div className='card-div-left d-flex flex-column'>
                     <div className='card-div-left1 position-relative'>
                       <div className='card-div-img position-absolute'>
-                        <img src={service.img} alt={service.title} className='h-100 w-100' />
+                        <img src={service.image} alt={service.title} className='h-100 w-100' />
                       </div>
-                      <Link to={service.button} className='card-button position-absolute text-decoration-none d-flex align-items-center justify-content-center'><UpArrow size={30} /> </Link>
+                      <a href={`/${service.slug}`} className='card-button position-absolute text-decoration-none d-flex align-items-center justify-content-center'><UpArrow size={30} /> </a>
                     </div>
                     <div className='card-content readex'>
                       <div className='content-title readex'>{service.title}</div>
                       <div className='content-description readex'>{service.description}</div>
                     </div>
-                    <Link to='' className='card-viewall readex text-decoration-none d-flex align-items-center justify-content-center p-2'><span>View All</span> </Link>
+                    <a href={`/${service.slug}`} className='card-viewall readex text-decoration-none d-flex align-items-center justify-content-center p-2'><span>View All</span> </a>
                   </div>
                   <div className='card-div-right'>
                   {Array.from({ length: 24 }, (_, i) => (

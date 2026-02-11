@@ -1,85 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import UpArrow from '../../icon/UpArrow'
 import Location from '../../icon/Location'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import API from '../../api/axiosInstance';
 
 
-const projectData = [
-    {
-        id: 1,
-        status: 'Completed',
-        pname: 'Greenview Apartments',
-        des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
-        loc: 'Bangalore',
-        img: 'src/assets/images/p-project1.png',
-        slug: 'greenview-appartments'
-    },
-    {
-        id: 2,
-        status: 'Completed',
-        pname: 'Greenview Apartments',
-        des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
-        loc: 'Bangalore',
-        img: 'src/assets/images/p-project2.png',
-        slug: 'greenview-appartments'
-    },
-    {
-        id: 3,
-        status: 'Completed',
-        pname: 'Greenview Apartments',
-        des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
-        loc: 'Bangalore',
-        img: 'src/assets/images/p-project3.png',
-        slug: 'greenview-appartments'
-    },
-    {
-        id: 4,
-        status: 'Completed',
-        pname: 'Greenview Apartments',
-        des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
-        loc: 'Bangalore',
-        img: 'src/assets/images/p-project4.png',
-        slug: 'greenview-appartments'
-    },
-    {
-        id: 5,
-        status: 'Completed',
-        pname: 'Greenview Apartments',
-        des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
-        loc: 'Bangalore',
-        img: 'src/assets/images/p-project5.png',
-        slug: 'greenview-appartments'
-    },
-    {
-        id: 6,
-        status: 'Completed',
-        pname: 'Greenview Apartments',
-        des: 'Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд ',
-        loc: 'Bangalore',
-        img: 'src/assets/images/p-project6.png',
-        slug: 'greenview-appartments'
-    },
-]
+const Projects = () => {
 
+    const [projectData, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-function Projects() {
-    const navigate = useNavigate();
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await API.get('/projects/');
+                setData(response.data);
+            } catch (err) {
+                setError(" Failed to load ");
+                console.log("Fetch error :", err)
+            }finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    },[]);
+
+    if(loading) return <div className='text-light p-5 text-center'>Loading....</div>
+    if(error) return <div className='text-light p-5 text-center'>{error}</div>
+
   return (
-    <div className='grid grid-cols-12 grid-rows-12 w-full h-full xl:gap-15 max-sm:gap-3 md:gap-5'>
-        {projectData.map((data, index) => {
+    <div className='grid grid-cols-12 grid-flow-row w-full h-full xl:gap-15 max-sm:gap-3 md:gap-5'>
+        {projectData.map((data) => {
             return(
                 <div 
-                    key={index}
-                    className=' xl:col-span-6 row-span-4 col-span-12 md:col-span-6 rounded-3xl bg-cover bg-center bg-no-repeat flex justify-center items-center group '
-                    style={{backgroundImage: `url(${data.img})`}}
+                    key={data.id}
+                    className=' xl:col-span-6 row-span-4 col-span-12 md:col-span-6 rounded-3xl bg-cover bg-center bg-no-repeat flex justify-center items-center group xl:h-90 md:h-51'
+                    style={{backgroundImage: `url(${data.image})`}}
                 >
-                    <div className='xl:h-60 h-40 w-[50%] relative xl:opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'>
-                        <div className=' bg-[url(src/assets/images/project-card.png)] bg-contain bg-no-repeat bg-center h-[95%] w-full absolute flex justify-center items-center'>
+                    <div className=' xl:h-60 h-40 w-[50%] relative xl:opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'>
+                        <div className=' bg-[url(/src/assets/images/project-card.png)] bg-contain bg-no-repeat bg-center h-[95%] w-full absolute flex justify-center items-center'>
                             <div className=' size-[80%] flex flex-col gap-1 pt-1'>
                                 <span className='bg-[#F4FF49] size-fit p-1 ps-3 pe-3 rounded-full text-[10px] xl:text-[14px]'>{data.status}</span>
-                                <span className='readex xl:text-[20px] text-[14px] font-semibold'>{data.pname}</span>
-                                <span className='text-[16px] xl:block hidden'>{data.des}</span>
-                                <span className='flex items-center text-[10px] xl:text-[14px]'><Location size={16} />{data.loc}</span>
+                                <span className='readex xl:text-[18px] text-[14px] font-semibold'>{data.title}</span>
+                                <span className='text-[16px] xl:block hidden h-19 overflow-y-hidden'>{data.description}</span>
+                                <span className='flex items-center text-[10px] xl:text-[14px]'><Location size={16} />{data.location}</span>
                             </div>
                         </div>
                         <div className='absolute xl:bottom-0 xl:left-49 bottom-4 left-25'>

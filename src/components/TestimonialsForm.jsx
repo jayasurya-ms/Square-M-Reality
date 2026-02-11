@@ -15,7 +15,7 @@ function TestimonialsForm() {
                     <span className='tform-title readex'>We'd Love To Hear <br />From You</span>
                 </div>
             </div>
-            <div className='h-60 w-50 max-sm:w-full! max-sm:h-full '>
+            <div className='xl:h-60 w-50 max-sm:w-full! max-sm:h-full '>
                 <Form tcolor={'black'}/>
             </div>
             <div className='tform3 col-sm-12 col-md-12 d-flex justify-content-center align-items-center position-relative flex-column'>

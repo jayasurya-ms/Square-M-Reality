@@ -73,7 +73,7 @@
         justify-content: start;
         padding: 50px 40px;
         transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Added a slight spring */
-        z-index: 10;
+        z-index: 100;
     }
 
     .nav-links-list.mobile-open {

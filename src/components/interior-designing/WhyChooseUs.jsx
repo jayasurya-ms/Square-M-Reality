@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
+import FormPopUp from '../FormPopUp';
 
 function WhyChooseUs() {
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  
   return (
     <div id='i-whychooseus' className='xl:h-273 md:h-203 max-sm:h-screen w-full bg-[#6B493A]/10'>
       <div className='size-full relative overflow-hidden'>
-        <div className='absolute text-[#6B493A]/6 flex font-extrabold xl:text-[300px] md:text-[200px] max-sm:text-[150px] inter xl:-top-20'>
+        <div className='absolute text-[#6B493A]/6 flex font-extrabold xl:text-[300px] md:text-[200px] max-sm:text-[150px] inter xl:-top-20 pointer-events-none'>
           Why Square Minterior
         </div>
       <div className='size-full'>
@@ -19,7 +23,12 @@ function WhyChooseUs() {
               <span className='readex xl:text-[18px] max-sm:text-[15px]'>Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой</span>
             </div>
             <div className=' xl:w-[60%] mad-sm:w-[60%] md:w-[80%] h-[30%] flex xl:justify-start max-sm:justify-center'>
-              <span className='readex text-[18px] w-39 h-12.5 bg-black rounded-full text-white flex justify-center items-center'>Get In Touch</span>
+               <button onClick={() => setIsPopupVisible(true)} className='xl:text-[18px] max-sm:text-[14px] readex bg-black text-white flex justify-center items-center rounded-full! h-12.5 w-39'>Get In Touch</button>
+                {/* The Component Call */}
+                <FormPopUp 
+                  isOpen={isPopupVisible} 
+                  onClose={() => setIsPopupVisible(false)} 
+                /> 
             </div>
           </div>
         </div>

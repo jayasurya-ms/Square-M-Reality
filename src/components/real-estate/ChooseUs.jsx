@@ -1,7 +1,10 @@
-import React from 'react'
-import Thumb from './../../icon/Thumb';
+import React, {useState} from 'react'
+import FormPopUp from '../FormPopUp';
 
-function ChooseUs() {
+const ChooseUs = () => {
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   return (
     <div id='c-choose' className='size-full overflow-hidden bg-[#EAE5DF]'>
       <div className='mt-5 mb-5 flex flex-col justify-center items-center'>
@@ -14,7 +17,12 @@ function ChooseUs() {
             <span className='xl:w-[90%] max-sm:w-full md:w-[70%] p-1'>
               Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой
             </span>
-            <span className='xl:text-[18px] max-sm:text-[14px] readex bg-black text-white flex justify-center items-center rounded-full h-12.5 w-39'>Get In Touch</span>
+            <button onClick={() => setIsPopupVisible(true)} className='xl:text-[18px] max-sm:text-[14px] readex bg-black text-white flex justify-center items-center rounded-full! h-12.5 w-39'>Get In Touch</button>
+                {/* The Component Call */}
+                <FormPopUp 
+                  isOpen={isPopupVisible} 
+                  onClose={() => setIsPopupVisible(false)} 
+                />
           </div>
         </div>
 

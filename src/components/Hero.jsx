@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../style/Hero.css'
 import Navbar from './Navbar'
 
@@ -9,11 +9,15 @@ import Arrow from '../icon/Arrow'
 import Play from '../icon/Play'
 import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion'
+import FormPopUp from './FormPopUp'
 
 
-function Hero() {
+const Hero = () => {
+
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   return (
-    <div id='hero' className='d-flex align-items-center justify-content-center flex-column h-100 w-100'>
+    <div id='hero' className='d-flex align-items-center justify-content-center flex-column h-100 w-100 overflow-hidden'>
       <div className='hero-top'>
         <div className='hero-top1 p-2 m-2 d-flex mt-3 readex'>
           <Location/>
@@ -31,12 +35,12 @@ function Hero() {
 
       <div className='hero-bg d-flex flex-column align-items-center justify-content-center'>
          <div className='hero-mid1 w-100 d-flex m-3 justify-content-between align-items-center'>
-          <div className='hero-mid1-div1 h-100 '>
-            <img src="src/assets/images/logo.png" alt="logo" className='h-100 w-100' />
+          <div className='hero-mid1-div1 h-100 ms-3'>
+            <a href="/"><img src="src/assets/images/logo.png" alt="logo" className='h-100 w-100' /></a>
           </div>
 
           <motion.div
-            className='hero-mid1-div2 h-100 readex'
+            className='hero-mid1-div2 h-100 readex overflow-hidden'
             initial={{opacity: 0, y: -100}}
             animate={{opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.3}}
@@ -45,7 +49,12 @@ function Hero() {
           </motion.div>
 
           <div className='hero-mid1-div3 h-100 align-items-center justify-content-center pe-4'>
-            <Link to='' className='rounded-pill border-0 p-2 pe-4 ps-4 readex'> Get In Touch  </Link>
+            <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
+            {/* The Component Call */}
+            <FormPopUp 
+              isOpen={isPopupVisible} 
+              onClose={() => setIsPopupVisible(false)} 
+            />
           </div>
          </div>
 
@@ -60,12 +69,12 @@ function Hero() {
          </div>
 
          <div className='hero-mid4 d-flex align-items-center ms-5 ps-3'>
-          <Link to='' className='d-flex rounded-pill border-0 p-2 pe-4 ps-4 align-items-center justify-content-center gap-2 readex'>
+          <a href='#services-section' className='d-flex rounded-pill border-0 p-2 pe-4 ps-4 align-items-center justify-content-center gap-2 readex'>
             <div>View all Services</div>
             <div className='hero-mid4-arrow rounded-circle d-flex p-1 justify-content-center'>
               <Arrow size={23}/>
             </div>
-           </Link> 
+           </a> 
          </div>
 
          <div className='hero-mid5 d-flex align-items-center ms-5'>
@@ -81,7 +90,7 @@ function Hero() {
               <div className='fs-5 readex'>Years of <br /> Experience</div>
             </div>
             <div className='hero-mid5-w'>
-              <button className='watch-now readex p-1 ps-4 pe-4 border-0 rounded-pill flex flex-col justify-center items-center gap-0 '><Play/> <br /> Watch Now</button>
+              <button className='watch-now readex p-1 ps-4 pe-4 border-0 rounded-pill flex flex-col justify-center items-center gap-0 '><Play/> Watch Now</button>
             </div>
           </div>
          </div>

@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import FormPopUp from '../FormPopUp';
 
-function AboutUs() {
+const AboutUs = () => {
   // Logic: isInView is now toggled by mouse events
   const [isHovered, setIsHovered] = useState(false);
+    
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   return (
     <div 
-      id='c-aboutus' 
+      id='aboutus' 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className='xl:h-screen md:h-120 max-sm:h-screen w-full bg-white overflow-hidden cursor-default xl:mt-4 xl:mb-10! max-sm:m-0'
@@ -26,12 +29,12 @@ function AboutUs() {
                   Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой
                 </span>
                 <span className='flex justify-start w-9/12'>
-                  <Link  to="#" className='text-white bg-black xl:w-39.5 xl:h-12.5 xl:text-[18px] max-sm:text-[13px] max-sm:w-30.5 max-sm:h-8.5 md:text-[15px] md:h-10 md:w-30 readex rounded-full flex justify-center items-center no-underline! '>
-                    Get In Touch
-                   </Link >
-                   <Link>
-                   
-                   </Link>
+                  <button onClick={() => setIsPopupVisible(true)} className='xl:text-[18px] max-sm:text-[14px] readex bg-black text-white flex justify-center items-center rounded-full! h-12.5 w-39'>Get In Touch</button>
+                {/* The Component Call */}
+                <FormPopUp 
+                  isOpen={isPopupVisible} 
+                  onClose={() => setIsPopupVisible(false)} 
+                />
                 </span>
               </div>
             </div>

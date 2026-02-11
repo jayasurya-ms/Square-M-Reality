@@ -1,30 +1,49 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../Navbar'
+import { motion } from 'framer-motion'
+import FormPopUp from '../FormPopUp'
 
-function ContactForm() {
+
+const ContactForm = () => {
+
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   return (
-    <div id='contactform-section' className='h-200 md:h-screen w-full bg-[#F9FEBA] overflow-hidden'>
+    <div id='contactform-section' className='h-220 md:h-screen w-full bg-[#F9FEBA] overflow-hidden'>
         <div className='size-full'>
-            <div className=' flex w-full justify-between md:justify-start p-4'>
+            <motion.div
+            className=' flex w-full justify-between md:justify-start p-4'
+            initial={{opacity: 0, y: -100}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.2}}
+            >
                 <div className=' flex justify-center items-center'>
-                    <img src="/src/assets/images/logo.png" alt="logo"  className='h-15 w-16 md:h-17.5 md:w-17.5'/>
+                    <a href="/"><img src="/src/assets/images/logo.png" alt="logo"  className='h-15 w-16 md:h-17.5 md:w-17.5'/></a>
                 </div>
-                <div className=' w-[80%]'>
+                <div className='md:w-[90%] xl:w-[80%]'>
                     <Navbar clr={'black'}/>
                 </div>
-            </div>
+                <div className='xl:flex justify-center items-center w-[20%] hidden'>
+                    <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
+                    {/* The Component Call */}
+                    <FormPopUp 
+                      isOpen={isPopupVisible} 
+                      onClose={() => setIsPopupVisible(false)} 
+                    />
+                </div>
+            </motion.div>
             <div>
                 <div className=' w-full flex justify-center items-center'>
                     <span className='rasa text-[30px] md:text-[70px] xl:text-[80px]'>Contact Me</span>
                 </div>
                 <div className=' w-full flex flex-col xl:flex-row mt-10!'>
-                    <div className=' w-full xl:w-[40%] flex flex-col items-center gap-2'>
-                        <div className='flex flex-col w-[90%] md:w-[80%]'>
+                    <div className=' w-full xl:w-[40%] flex flex-col items-center gap-3'>
+                        <div className='flex flex-col w-[90%] md:w-[80%] gap-1'>
                             <span className='readex text-[16px] md:text-[18px] xl:text-[20px]'>By Form</span>
-                            <span className='readex text-[14px] md:text-[16px] xl:text-[18px]'>Mon-Fri, 9am-4pm EST</span>
+                            <span className='readex text-[14px] md:text-[16px] xl:text-[18px]'>Use The Contact Form To Send Me A Message. <br />I'll Get Back To You Within 24 Hours.</span>
                         </div>
-                        <div className='flex flex-col w-[90%] md:w-[80%]'>
-                            <span className='readex text-[16px] md:text-[18px] xl:text-[20px]'>By Form</span>
+                        <div className='flex flex-col w-[90%] md:w-[80%] gap-1'>
+                            <span className='readex text-[16px] md:text-[18px] xl:text-[20px]'>Hours</span>
                             <span className='readex text-[14px] md:text-[16px] xl:text-[18px]'>Mon-Fri, 9am-4pm EST</span>
                         </div>
                     </div>
@@ -68,8 +87,7 @@ function ContactForm() {
                             </div>
                         </div>
                         <div className='w-[80%] md:w-[80%] flex flex-col md:flex-row justify-center md:justify-around md:p-3 gap-2 md:gap-5'>
-                            <button className='border-black border-2 p-1 ps-4 pe-4 rounded-full! bg-black text-white '>Book Free Consultation</button>
-                            <button className='border-2 p-1 ps-4 pe-4 rounded-full! text-black'>Request A Call Back</button>
+                           <button className='border-2 p-1 ps-4 pe-4 rounded-full! text-black'>Request A Call Back</button>
                         </div>
                         </form>
                     </div>

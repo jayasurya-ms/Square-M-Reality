@@ -3,7 +3,7 @@ import Thumb from './../../icon/Thumb';
 
 function ChooseUs() {
   return (
-    <div id='c-choose' className='size-full overflow-hidden bg-white'>
+    <div id='chooseus-section' className='size-full overflow-hidden bg-white'>
       <div className='mt-5 mb-5'>
         {/* Header Section */}
         <div className='w-full flex flex-col items-center mb-6'>

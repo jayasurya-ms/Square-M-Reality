@@ -1,31 +1,40 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Phone from '../../icon/Phone'
 import Location from '../../icon/Location'
 import Play from '../../icon/Play'
+import FormPopUp from '../FormPopUp'
 import {motion} from 'framer-motion'
 
-function Hero() {
+const Hero = () => {
+
+    const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   return (
     <div id='r-hero-section' className='h-screen w-full overflow-hidden'>
-      <div className='size-full flex flex-col justify-between bg-[url(/src/assets/images/r-hero.jpg)] bg-cover bg-top bg-no-repeat relative'>
+      <div className='size-full flex flex-col justify-between bg-[url(/src/assets/images/r-hero.png)] bg-cover bg-center bg-no-repeat relative'>
       <div className='absolute inset-0 bg-black/30 z-0'></div>
 
       {/* top */}
         <motion.div
-        className=' w-full flex justify-between bg-[#5a 758c] rounded-2xl z-1 p-3'
+        className=' w-full flex justify-between bg-[#5a 758c] p-3 z-10'
         initial={{opacity: 0, y: -100}}
         animate={{opacity: 1, y: 0}}
         transition={{duration: 0.5}}
         >
-            <div className='bg-white/90 rounded-xl'>
-                <img src="/src/assets/images/logo.png" alt="logo" className='h-18.5 w-18.5'/>
+            <div className=''>
+                <a href="/"><img src="/src/assets/images/logo.png" alt="logo" className='h-18.5 w-18.5'/></a>
             </div>
-            <div className='bg-primay w-[80%]'>
+            <div className='bg-primay w-[80%] z-10'>
                 <Navbar />
             </div>
             <div className='xl:flex justify-center items-center p-3 hidden'>
-                <a href='' className='readex rounded-full text-black! no-underline! btn-bg-clr p-1 ps-3 pe-3 text-[20px]'>Get In Touch</a>
+                <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
+                {/* The Component Call */}
+                <FormPopUp 
+                  isOpen={isPopupVisible} 
+                  onClose={() => setIsPopupVisible(false)} 
+                />
             </div>
         </motion.div>
 

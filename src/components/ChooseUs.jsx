@@ -19,7 +19,7 @@ function ChooseUs() {
                     <span>What Makes Us<br />Different</span>
                 </div>
                 <div className='chooseus-right-mid readex'>
-                    <span>Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой нд хувь төлөхгүй бөгөөд программ ашиглалтын</span>
+                    <span>Та hello Welcome үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой нд хувь төлөхгүй бөгөөд программ ашиглалтын</span>
                 </div>
                 <div className='chooseus-right-bot d-flex p-0 m-0'>
                     <div className='chooseus-right-bot1 d-flex flex-column'>

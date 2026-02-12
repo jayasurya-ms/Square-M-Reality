@@ -52,7 +52,7 @@ const Services = () => {
         <div className='service-top row w-100'>
           <div className='col-sm-12 col-md-6 p-0'>
             <div className='service-top2 d-flex align-items-start w-100'>
-              <span className='service-title solitreo text-white ps-5 mt-20! w-100'>Services We <br />Offer</span>
+              <span className='service-title solitreo text-white ps-5 mt-10! w-100'>Services We <br />Offer</span>
             </div>
           </div>
           <div className='col-sm-12 col-md-6 p-0'>
@@ -63,14 +63,14 @@ const Services = () => {
                 </span>
               </div>
             </div>
-            <div className='h-50 md:flex max-sm:flex align-items-center justify-content-center gap-2 ps-5 xl:hidden max-sm:mt-15! md:mt-5!'>
-              <div><Link className='text-white readex'  to="">view all services </Link ></div>
+            <div className='h-50 md:flex max-sm:flex align-items-center justify-content-center gap-2 ps-5 xl:hidden max-sm:mt-15! md:mb-5!'>
+              <div><Link className='text-white readex'  to="">Services </Link ></div>
               <button className='card-prev border-0 rounded-circle d-flex' onClick={handlePrev}><Arrow size={20} /></button>
               <button className='card-next border-0 rounded-circle d-flex' onClick={handleNext}><Arrow size={20} /></button>
             </div>
           </div>
         </div>
-        <div className='service-bottom d-flex' style={{ height: '450px', width: '100%', position: 'relative', overflow: 'visible' }}>
+        <div className='service-bottom d-flex ' style={{ height: '450px', width: '85%', position: 'relative', overflow: 'visible' }}>
           {servicesData.map((service, index) => {
             const relPos = getCardPosition(index);
             

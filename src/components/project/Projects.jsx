@@ -40,14 +40,14 @@ const Projects = () => {
                 >
                     <div className=' xl:h-60 h-40 w-[50%] relative xl:opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out'>
                         <div className=' bg-[url(/src/assets/images/project-card.png)] bg-contain bg-no-repeat bg-center h-[95%] w-full absolute flex justify-center items-center'>
-                            <div className=' size-[80%] flex flex-col gap-1 pt-1'>
+                            <div className=' size-[80%] flex flex-col xl:gap-1 xl:pt-4! md:pt-2! md:gap-2 pt-4! gap-1'>
                                 <span className='bg-[#F4FF49] size-fit p-1 ps-3 pe-3 rounded-full text-[10px] xl:text-[14px]'>{data.status}</span>
-                                <span className='readex xl:text-[18px] text-[14px] font-semibold'>{data.title}</span>
-                                <span className='text-[16px] xl:block hidden h-19 overflow-y-hidden'>{data.description}</span>
+                                <span className='readex xl:text-[16px] text-[14px] font-semibold xl:line-clamp-1 line-clamp-2'>{data.title}</span>
+                                <span className='text-[16px] xl:block hidden h-13 overflow-y-hidden xl:line-clamp-2'>{data.description}</span>
                                 <span className='flex items-center text-[10px] xl:text-[14px]'><Location size={16} />{data.location}</span>
                             </div>
                         </div>
-                        <div className='absolute xl:bottom-0 xl:left-49 bottom-4 left-25'>
+                        <div className='absolute xl:bottom-2 xl:left-43.5 md:left-24.5 md:bottom-4 bottom-4 left-25'>
                             <Link to={`/projects/${data.slug}`}  className='bg-[#F4FF49] xl:size-12 size-7 flex rounded-full justify-center items-center'><UpArrow size={32}/> </Link>
                         </div>
                     </div>

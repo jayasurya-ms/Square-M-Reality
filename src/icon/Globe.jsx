@@ -1,15 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-function Globe() {
+const Globe = ({ size = 24, color = "black" }) => {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M1.60156 7H18.4016" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M1.60156 13H18.4016" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M9.49967 1C7.81501 3.69961 6.92188 6.81787 6.92188 10C6.92188 13.1821 7.81501 16.3004 9.49967 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    <path d="M10.5 1C12.1847 3.69961 13.0778 6.81787 13.0778 10C13.0778 13.1821 12.1847 16.3004 10.5 19" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <svg 
+      width={size} 
+      height={size} 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke={color} 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      {/* The main envelope rectangle */}
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      {/* The 'V' shape for the envelope flap */}
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
-  )
-}
+  );
+};
 
-export default Globe
+export default Globe;

@@ -96,8 +96,8 @@ const ProjectDetail = () => {
               onClose={() => setIsPopupVisible(false)} 
             />
           </div>
-          <div className='h-full md:h-[90%] w-full flex flex-col justify-between items-center'>
-            <div className='w-[90%] flex flex-col gap-1 items-center md:items-start mt-3'>
+          <div className='h-full md:h-[90%] w-full flex flex-col justify-between items-center '>
+            <div className='w-[90%] flex flex-col gap-1 items-center md:items-start xl:mt-3 '>
               <span className='btn-bg-clr p-1 ps-3 pe-3 rounded-full w-min'>{data.status}</span>
               <span className='text-[16px] md:text-[20px] xl:text-[24px] readex font-bold'>{data.title}</span>
               <span className='text-[14px] md:text-[16px] xl:text-[18px]'>{data.description}</span>

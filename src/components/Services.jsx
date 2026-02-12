@@ -67,7 +67,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className='service-bottom d-flex' style={{ height: '600px', width: '100%', position: 'relative', overflow: 'visible' }}>
+        <div className='service-bottom flex items-center justify-center!' style={{ height: '600px', width: '90%', position: 'relative', overflow: 'visible' }}>
           {servicesData.map((service, index) => {
             const relPos = getCardPosition(index);
             
@@ -77,7 +77,7 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className={`card position-absolute`}
+                className={`card position-absolute bg-amber-800`}
                 style={{
                   transition: 'all 0.5s ease-in-out',
                   left: '0',

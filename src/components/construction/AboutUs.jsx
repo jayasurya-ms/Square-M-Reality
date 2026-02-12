@@ -29,7 +29,7 @@ const AboutUs = () => {
                   Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой
                 </span>
                 <span className='flex justify-start w-9/12'>
-                  <button onClick={() => setIsPopupVisible(true)} className='xl:text-[18px] max-sm:text-[14px] readex bg-black text-white flex justify-center items-center rounded-full! h-12.5 w-39'>Get In Touch</button>
+                  <button onClick={() => setIsPopupVisible(true)} className='xl:text-[18px] max-sm:text-[14px] md:text-[16px] readex bg-black text-white flex justify-center items-center rounded-full! xl:h-12.5  xl:w-39 md:h-10 md:w-32 h-8 w-32 '>Get In Touch</button>
                 {/* The Component Call */}
                 <FormPopUp 
                   isOpen={isPopupVisible} 
@@ -56,22 +56,21 @@ const AboutUs = () => {
             <div className='absolute flex h-full w-10/12 xl:-top-15 justify-around max-sm:relative max-sm:-top-15 md:-top-2 max-sm:flex-wrap'>
 
                 <div className='bg-[url(src/assets/images/c-about-div.png)] bg-cover bg-center flex flex-col justify-center items-center xl:w-64 xl:h-39.5 max-sm:w-17 max-sm:h-12 md:w-22 md:h-15'>
-                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] font-semibold'>8+</span>
-                  <span className='text-white xl:text-[20px] max-sm:text-[8px] readex text-center'>Years Of Construction</span>
+                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] md:text-[16px] font-semibold'>8+</span>
+                  <span className='text-white xl:text-[20px] max-sm:text-[8px] md:text-[10px] readex text-center'>Years Of Construction</span>
                 </div>
                 <div className='bg-[url(src/assets/images/c-about-div.png)] bg-cover bg-center flex flex-col justify-center items-center xl:w-64 xl:h-39.5 max-sm:w-17 max-sm:h-12 md:w-22 md:h-15'>
-                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] font-semibold'>50+</span>
-                  <span className='text-white xl:text-[20px] max-sm:text-[8px] readex text-center'>Houses Constructed</span>
+                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] md:text-[16px] font-semibold'>50+</span>
+                  <span className='text-white xl:text-[20px] max-sm:text-[8px] readex md:text-[10px] text-center'>Houses Constructed</span>
                 </div>
                 <div className='bg-[url(src/assets/images/c-about-div.png)] bg-cover bg-center flex flex-col justify-center items-center xl:w-64 xl:h-39.5 max-sm:w-17 max-sm:h-12 md:w-22 md:h-15'>
-                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] font-semibold'>24/7</span>
-                  <span className='text-white xl:text-[20px] max-sm:text-[8px] readex text-center'>Response Time</span>
+                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] md:text-[16px] font-semibold'>24/7</span>
+                  <span className='text-white xl:text-[20px] max-sm:text-[8px] readex md:text-[10px] text-center'>Response Time</span>
                 </div>
                 <div className='bg-[url(src/assets/images/c-about-div.png)] bg-cover bg-center flex flex-col justify-center items-center xl:w-64 xl:h-39.5 max-sm:w-17 max-sm:h-12 md:w-22 md:h-15'>
-                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] font-semibold'>40+</span>
-                  <span className='text-white xl:text-[20px] max-sm:text-[8px] readex text-center'>Response Time</span>
+                  <span className='btn-text-clr xl:text-[60px] max-sm:text-[14px] md:text-[16px] font-semibold'>40+</span>
+                  <span className='text-white xl:text-[20px] max-sm:text-[8px] md:text-[10px] readex text-center'>Response Time</span>
                 </div>
-
             </div>
           </div>
         </div>

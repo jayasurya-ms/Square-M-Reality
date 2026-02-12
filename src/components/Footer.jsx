@@ -19,8 +19,8 @@ function Footer() {
                     <nav className='footer-nav1 h-75'>
                         <ul className='d-flex w-100 h-100 justify-content-between readex list-unstyled flex-column'>
                             <li><a href="/">Home </a></li>
-                            <li><a href="">Why Choose Us </a></li>
                             <li><a href="">About Us </a></li>
+                            <li><a href="/blogs">Blogs</a></li>
                             <li><a href="/construction">Construction </a></li>
                             <li><a href="/real-estate">Real Estate </a></li>
                             <li><a href="/interior-designing">Interior Designing </a></li>
@@ -43,8 +43,8 @@ function Footer() {
                 <span className='bg-light h-75'></span>
                 <div className='p-1 d-flex flex-column justify-content-between'>
                     <div className='footer3-top text-light d-flex flex-column gap-2 readex'>
-                        <span className='footer3-phone'>+91-125463987</span>
-                        <span className='footer3-email'>Squarem reality@builders.com</span>
+                        <a href='tel:+918754213265' className='footer3-phone text-white no-underline!'>+91-125463987</a>
+                        <a href='mailto:squareM@gmail.com' className='footer3-email text-white no-underline!'>Squarem reality@builders.com</a>
                     </div>
                     <div className='footer3-bot w-50 d-flex gap-3 readex'>
                         <div className='footer3-social-media d-flex flex-column gap-3'>

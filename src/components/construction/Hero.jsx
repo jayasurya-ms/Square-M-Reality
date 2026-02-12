@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import Navbar from '../Navbar'
-import Play from '../../icon/Play'
-import Arrow from '../../icon/Arrow'
-import { Link } from 'react-router-dom';
 import FormPopUp from '../FormPopUp'
+import Form from '../../icon/Form';
+import Phone from '../../icon/Phone';
+import Location from '../../icon/Location';
 
 const Hero = () => {
 
@@ -14,17 +14,32 @@ const Hero = () => {
       <div className='flex flex-col justify-between size-full bg-[url(src/assets/images/c-hero.png)] bg-cover bg-center'>
         
         {/* TOP DIV */}
-        <div className='ani-top xl:h-25 w-full flex ps-4 pt-1! z-10 max-sm:justify-between md:justify-evenly max-sm:h-10 items-center'>
+        <div className='ani-top xl:h-25 w-full flex ps-4 pt-1! z-10 max-sm:justify-between md:justify-between xl:justify-evenly max-sm:h-10 items-center'>
             <div className='xl:h-full xl:w-25 flex justify-center items-center'>
                 <a href="/"><img src="src/assets/images/logo.png" alt="Logo" className='size-22 max-sm:size-10 md:size-18'/></a>
             </div>
             <div className='xl:h-full xl:w-275 '>
                 <Navbar />
             </div>
-            <div className='xl:h-full xl:w-55 xl:flex justify-center items-center md:hidden max-sm:hidden'>
-                {/* 1. Only the button stays here */}
-                <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch </button>
-            </div>
+            <div className='hero-mid1-div3 xl:h-100 align-items-center justify-content-center pe-4 max-sm:fixed max-sm:-right-13 max-sm:top-80 max-sm:z-50'>
+            <button 
+              onClick={() => setIsPopupVisible(true)} 
+              className='group relative flex items-center justify-center p-2 ps-4 pe-4 rounded-full! border-0 bg-[#f59e0b] text-black transition-all duration-300 ease-in-out 
+                         max-sm:w-20 max-sm:hover:w-44 max-sm:h-12 max-sm:ps-4
+                         md:p-2 md:pe-4 md:ps-4 readex btn-bg-clr'
+            >
+              {/* Text logic: Hidden partly on mobile, fully visible on hover/desktop */}
+              <span className='whitespace-nowrap transition-all duration-300 max-sm:opacity-0 max-sm:group-hover:opacity-100'>
+                Get In Touch
+              </span>
+
+              {/* Optional: Add an icon or just leave the text to peek out */}
+              <div className='absolute left-3 max-sm:block hidden group-hover:hidden'>
+                 {/* You can put an icon here that shows when the button is closed */}
+                <Form />
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* BOTTOM SECTION */}
@@ -44,11 +59,9 @@ const Hero = () => {
                     <span className='w-px xl:h-15 max-sm:h-6 md:h-10 bg-white'></span>
                     <span className='xl:text-[18px] max-sm:text-[10px] md:text-[14px] font-semibold readex text-white'>Years Of <br />Experience</span>
                 </div>
-                <div>
-                    <Link to="#" className='xl:w-42.75 xl:h-16.5 max-sm:w-20 max-sm:h-10 md:h-13 md:w-30 bg-[url(src/assets/images/hero-bg.png)] no-underline! text-white! flex flex-col items-center justify-center bg-center bg-cover rounded-full'>
-                        <span className='max-sm:size-6'><Play /></span>
-                        <span className='max-sm:text-[9px]'>Watch Now</span>
-                     </Link>
+                <div className='text-white flex flex-col justify-center md:gap-2 max-sm:text-[14px] max-sm:pb-2!'>
+                    <a href="tel:+919916446595" className='flex text-white no-underline!'><Phone color={'white'}/> 1203654789</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Bangalore" target="_blank" className='flex text-white no-underline!'><Location color={'white'}/> Bangalore</a>
                 </div>
             </div>
         </div>

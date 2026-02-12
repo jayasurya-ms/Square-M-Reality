@@ -20,7 +20,7 @@ function ProjectCard({data,clr}) {
             <span className='card-des readex ps-1'>{data.description}</span>
             <span className='card-location readex ps-1 d-flex gap-1 align-items-center'><Location size={14}/>{data.location}</span>
           </div>
-          <span className='position-absolute d-flex align-items-center justify-content-center' style={{ backgroundColor: clr.b_color || '#F4FF49' }}><UpArrow size={46} color={clr.a_color}/></span>
+          <a href={`/projects/${data.slug}`} className='position-absolute d-flex align-items-center justify-content-center -bottom-6 right-9 md:-bottom-4.5 md:right-15.5 rounded-full' style={{ backgroundColor: clr.b_color || '#F4FF49' }}><UpArrow size={46} color={clr.a_color}/></a>
         </div>
       </div>
     </div>

@@ -10,6 +10,7 @@ import Play from '../icon/Play'
 import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion'
 import FormPopUp from './FormPopUp'
+import Form from '../icon/Form'
 
 
 const Hero = () => {
@@ -18,25 +19,25 @@ const Hero = () => {
 
   return (
     <div id='hero' className='d-flex align-items-center justify-content-center flex-column h-100 w-100 overflow-hidden'>
-      <div className='hero-top'>
-        <div className='hero-top1 p-2 m-2 d-flex mt-3 readex'>
+      <div className='hero-top z-10 relative'>
+        <a href="https://www.google.com/maps/search/?api=1&query=Bangalore" target="_blank" className='hero-top1 p-2 m-2 d-flex mt-3 readex text-black! no-underline!'>
           <Location/>
           <p>Bangalore</p>
-        </div>
-        <div className='hero-top2 p-2 m-2 d-flex mt-3 readex'>
+        </a>
+        <a href='tel:+917897899957' className='hero-top2 p-2 m-2 d-flex mt-3 readex text-black! no-underline!'>
           <Phone/>
           <p>1203654789</p>
-        </div>
-        <div className='hero-top3 p-2 m-2 d-flex mt-3 gap-2 readex'>
+        </a>
+        <a href='mailto:squareM@gmail.com' className='hero-top3 pt-2 m-2 d-flex mt-3 gap-2 readex text-black! no-underline!'>
           <Globe/>
           <p>www.squaremreality.com</p>
-        </div>
+        </a>
       </div>
 
       <div className='hero-bg d-flex flex-column align-items-center justify-content-center'>
          <div className='hero-mid1 w-100 d-flex m-3 justify-content-between align-items-center'>
           <div className='hero-mid1-div1 h-100 ms-3'>
-            <a href="/"><img src="src/assets/images/logo.png" alt="logo" className='h-100 w-100' /></a>
+            <a href="/"><img src="src/assets/images/logo.png" alt="logo" className='md:h-18 md:w-18' /></a>
           </div>
 
           <motion.div
@@ -48,9 +49,25 @@ const Hero = () => {
             <Navbar />
           </motion.div>
 
-          <div className='hero-mid1-div3 h-100 align-items-center justify-content-center pe-4'>
-            <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
-            {/* The Component Call */}
+          <div className='hero-mid1-div3 xl:h-100 align-items-center justify-content-center pe-4 max-sm:fixed max-sm:-right-13 max-sm:top-1/2 max-sm:z-50 '>
+            <button 
+              onClick={() => setIsPopupVisible(true)} 
+              className='group relative flex items-center justify-center p-2 ps-4 pe-4 rounded-full! border-0 bg-[#f59e0b] text-black transition-all duration-300 ease-in-out 
+                         max-sm:w-20 max-sm:hover:w-44 max-sm:h-12 max-sm:ps-4
+                         md:p-2 md:pe-4 md:ps-4 readex btn-bg-clr'
+            >
+              {/* Text logic: Hidden partly on mobile, fully visible on hover/desktop */}
+              <span className='whitespace-nowrap transition-all duration-300 max-sm:opacity-0 max-sm:group-hover:opacity-100'>
+                Get In Touch
+              </span>
+
+              {/* Optional: Add an icon or just leave the text to peek out */}
+              <div className='absolute left-3 max-sm:block hidden group-hover:hidden'>
+                 {/* You can put an icon here that shows when the button is closed */}
+                 <Form />
+              </div>
+            </button>
+
             <FormPopUp 
               isOpen={isPopupVisible} 
               onClose={() => setIsPopupVisible(false)} 
@@ -69,7 +86,7 @@ const Hero = () => {
          </div>
 
          <div className='hero-mid4 d-flex align-items-center ms-5 ps-3'>
-          <a href='#services-section' className='d-flex rounded-pill border-0 p-2 pe-4 ps-4 align-items-center justify-content-center gap-2 readex'>
+          <a href='#services-section' className='w-56! d-flex rounded-pill border-0 p-2 pe-4 ps-4 align-items-center justify-content-center gap-2 readex '>
             <div>View all Services</div>
             <div className='hero-mid4-arrow rounded-circle d-flex p-1 justify-content-center'>
               <Arrow size={23}/>

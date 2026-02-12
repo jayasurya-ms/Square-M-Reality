@@ -16,7 +16,7 @@ function ConstructionFooter() {
             bounce: 0.8, 
             duration: 0.8 
           }}
-          className='w-full readex absolute text-center text-[#000000]/10 xl:text-[300px] md:text-[980%] max-sm:text-[500%] xl:-bottom-42 md:-bottom-22 max-sm:-bottom-11'
+          className='w-full readex absolute text-center text-[#000000]/10 xl:text-[300px] md:text-[980%] max-sm:text-[500%] xl:-bottom-42 md:-bottom-22 max-sm:-bottom-11 pointer-events-none'
         >
           SquareM
         </motion.div>

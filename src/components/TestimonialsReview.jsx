@@ -58,19 +58,19 @@ function TestimonialsReview() {
         <div className='treview-bot w-100 row m-0 d-flex align-items-center justify-content-evenly mt-3'>
           {reviews.map((review) => {
               return(
-                  <div  key={review.id} className='col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center'>
+                  <div  key={review.id} className='col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center h-full p-0'>
                     <div className='treview-card d-flex flex-column gap-2 '>
                       <div className='treview-card-top'>
-                        <img src="src\assets\images\review-bg.png" alt="" />
+                        <img src="src\assets\images\review-bg.png" alt="squareM" />
                       </div>
-                      <div className='treview-card-mid d-flex align-items-center justify-content-center gap-1'>
-                        <div className='treview-card-mid1 d-flex gap-1 rounded-pill align-items-center justify-content-center'>
+                      <div className='treview-card-mid d-flex align-items-center justify-content-center gap-1 w-full'>
+                        <div className='treview-card-mid1 d-flex gap-1 rounded-pill align-items-center justify-content-center flex-row w-full'>
                           <img src={`${review.photo}`} alt="" />
                           <span>{review.name}</span>
                           
                         </div>
-                        <div className='treview-card-mid2 bg-light'></div>
-                        <span className='treview-card-mid3 readex text-light'>{review.date}</span>
+                        <div className='treview-card-mid2 bg-light flex'></div>
+                        <span className='treview-card-mid3 readex text-light flex w-full'>{review.date}</span>
                       </div>
                       <div className='treview-card-bot p-3 w-100'>
                         <span className='w-100 readex text-light'>{review.content}</span>

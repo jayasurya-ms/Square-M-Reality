@@ -18,12 +18,8 @@ function TestimonialsForm() {
             <div className='xl:h-60 w-50 max-sm:w-full! max-sm:h-full '>
                 <Form tcolor={'black'}/>
             </div>
-            <div className='tform3 col-sm-12 col-md-12 d-flex justify-content-center align-items-center position-relative flex-column'>
+            <div className='tform3 col-sm-12 col-md-12 d-flex justify-content-center align-items-center position-relative flex-column pointer-events-none'>
                 <img src="src/assets/images/tform.png" alt="Background image"/>
-                <div className='tform-btn-div position-absolute readex'>
-                    <span>We Ae Excited To Connect With You</span>
-                    <button className='tform-btn'>Get A Call Back <span className='flex justify-center items-center'><Arrow /></span></button>
-                </div>
             </div>
         </div>
     </div>

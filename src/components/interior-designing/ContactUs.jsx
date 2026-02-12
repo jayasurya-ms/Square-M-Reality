@@ -39,7 +39,6 @@ function ContactUs() {
               <div className=' h-[90%] w-full text-white'>
                 <Form tcolor={'#5A3523'}/>
               </div>
-              <span className='flex xl:justify-around items-center md:justify-center md:flex-col md:gap-3 max-sm:flex-col max-sm:gap-2'>we are excited to connect with you< Link  to="" className='bg-black xl:h-10 w-51 flex rounded-full justify-center items-center no-underline! text-white gap-1'>Get A Call Back <span className='bg-white rounded-full flex justify-center items-center'><Arrow /></span> </Link ></span>
             </div>
           </div>
         </div>

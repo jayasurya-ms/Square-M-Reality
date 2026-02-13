@@ -6,8 +6,7 @@ import Phone from './../../icon/Phone';
 import {motion} from 'framer-motion';
 import FormPopUp from '../FormPopUp';
 import API from '../../api/axiosInstance';
-import { div } from 'framer-motion/client';
-
+import Form from '../../icon/Form';
 const ProjectDetail = () => {
 
   const { slug } = useParams();
@@ -38,12 +37,12 @@ const ProjectDetail = () => {
   if (error) return <div className='text-light p-5 text-center'>{error}</div>
 
   return (
-    <div id="projectdetail-section" className="h-screen w-full">
-      <div className=" size-full flex flex-col md:flex-row">
+    <div id="projectdetail-section" className="xl:h-screen h-200 w-full">
+      <div className=" size-full flex flex-col xl:flex-row">
 
         {/* LEFT */}
         <motion.div
-          className="bg-purple-100 w-full h-[50%] md:h-full md:w-[75%] flex flex-col justify-between relative overflow-hidden"
+          className="bg-purple-100 w-full h-[50%] xl:h-full xl:w-[75%] flex flex-col justify-between relative overflow-hidden"
           initial={{ x: '-50%'}}
           animate={{ x: 0}}
           transition={{ duration: 0.5, delay : 0.3}}
@@ -87,23 +86,39 @@ const ProjectDetail = () => {
         </motion.div>
 
         {/* RIGHT */}
-        <div className=" w-full h-[50%] md:h-full md:w-[25%] flex flex-col">
-          <div className='h-[10%] w-full hidden md:flex justify-center items-center mt-3'>
-            <button onClick={() => setIsPopupVisible(true)} className='rounded-pill border-0 p-2 pe-4 ps-4 readex btn-bg-clr'> Get In Touch  </button>
-            {/* The Component Call */}
-            <FormPopUp 
-              isOpen={isPopupVisible} 
-              onClose={() => setIsPopupVisible(false)} 
-            />
+        <div className=" w-full h-[50%] xl:h-full xl:w-[25%] flex flex-col">
+          <div className='hero-mid1-div3 xl:w-full! xl:h-27 align-items-center justify-content-center pe-4 max-sm:fixed max-sm:-right-13 max-sm:top-1/2 max-sm:z-50'>
+                <button 
+                  onClick={() => setIsPopupVisible(true)} 
+                  className='group relative flex items-center justify-center p-2 ps-4 pe-4 rounded-full! border-0 bg-[#f59e0b] text-black transition-all duration-300 ease-in-out 
+                             max-sm:w-20 max-sm:hover:w-44 max-sm:h-12 max-sm:ps-4
+                             md:p-2 md:pe-4 md:ps-4 readex btn-bg-clr'
+                >
+                  {/* Text logic: Hidden partly on mobile, fully visible on hover/desktop */}
+                  <span className='whitespace-nowrap transition-all duration-300 max-sm:opacity-0 max-sm:group-hover:opacity-100'>
+                    Get In Touch
+                  </span>
+
+                  {/* Optional: Add an icon or just leave the text to peek out */}
+                  <div className='absolute left-3 max-sm:block hidden group-hover:hidden'>
+                     {/* You can put an icon here that shows when the button is closed */}
+                     <Form />
+                  </div>
+                </button>
+
+                <FormPopUp 
+                  isOpen={isPopupVisible} 
+                  onClose={() => setIsPopupVisible(false)} 
+                />
           </div>
-          <div className='h-full md:h-[90%] w-full flex flex-col justify-between items-center '>
-            <div className='w-[90%] flex flex-col gap-1 items-center md:items-start xl:mt-3 '>
+          <div className='h-full xl:h-[90%] w-full flex flex-col justify-between items-center pt-2'>
+            <div className='w-[90%] flex flex-col gap-2 items-center md:items-start xl:mt-3 '>
               <span className='btn-bg-clr p-1 ps-3 pe-3 rounded-full w-min'>{data.status}</span>
               <span className='text-[16px] md:text-[20px] xl:text-[24px] readex font-bold'>{data.title}</span>
               <span className='text-[14px] md:text-[16px] xl:text-[18px]'>{data.description}</span>
-              <a href="" className='p-2 ps-3 pe-3 rounded-full bg-black w-[70%] text-white no-underline! text-center'>Book Now</a>
+              <a href="" className='p-2 ps-3 pe-3 rounded-full bg-black w-[70%] md:w-[40%] xl:w-[70%] text-white no-underline! text-center'>Book Now</a>
             </div>
-            <div className='w-[90%] md:mb-4! md-2! flex flex-col gap-2'>
+            <div className='w-[90%] mb-4! mt-2! flex flex-col gap-2'>
               <div className='flex flex-col'>
                 <span className='text-[14px] md:text-[16px] xl:text-[18px] font-semibold'>By Email</span>
                 <span className='text-[12px] md:text-[14px] xl:text-[16px] '>Squarem Reality@Builders.Com</span>

@@ -8,6 +8,7 @@ import ProjectDetail from './components/project/ProjectDetail';
 import Contact from './pages/Contact';
 import RealEstate from './pages/RealEstate';
 import Blogs from './pages/Blog';
+import BlogDetails from './components/blog/BlogDetails';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/projects/:slug' element={<ProjectDetail />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/blogs' element={<Blogs />} />
+      <Route path='/blog/:slug' element={<BlogDetails />} />
     </Routes>
     </BrowserRouter>
   )

@@ -12,19 +12,19 @@ const Hero = () => {
     
 
   return (
-    <div id='b-hero-section' className='h-screen w-full bg-pink-600 overflow-hidden'>
-      <div className='size-full relative overflow-hidden bg-lime-500 flex flex-col justify-between items-center'>
+    <div id='b-hero-section' className='h-screen w-full overflow-hidden'>
+      <div className='size-full relative overflow-hidden flex flex-col justify-between items-center'>
         <div className='absolute size-full bg-[url(/src/assets/images/blog-hero.jpg)] bg-cover bg-top bg-no-repeat overflow-hidden -z-1'></div>
         <motion.div
-        className='bg-amber-600 w-full flex justify-between pt-2'
+        className=' w-full flex justify-between pt-2'
         initial={{opacity: 0, y: -100}}
         animate={{ opacity: 1, y: 0}}
         transition={{duration: 0.6, delay: 0.1}}
         >
-            <div className='bg-white flex xl:w-1/12 justify-center'>
+            <div className=' flex xl:w-1/12 justify-center'>
                 <img src="/src/assets/images/logo.png" alt="Logo" className='h-17.5 w-17.5'/>
             </div>
-            <div className='bg-cyan-400 xl:w-9/12'>
+            <div className=' xl:w-9/12'>
                 <Navbar />
             </div>
             <div className='hero-mid1-div3 align-items-center justify-content-center pe-4 max-sm:fixed max-sm:-right-13 max-sm:top-1/2 max-sm:z-50 '>
@@ -52,8 +52,8 @@ const Hero = () => {
                 />
           </div>
         </motion.div>
-        <div className='bg-cyan-600 w-full flex justify-center'>
-            <div className='bg-green-600'>
+        <div className=' w-full flex justify-center'>
+            <div>
                 <span className='rasa text-[50px] md:text-[80px] xl:text-[100px] text-white font-bold flex'>
                     <motion.div
                     initial={{opacity:0, x: '-100%'}}
@@ -94,7 +94,7 @@ const Hero = () => {
             </div>
         </div>
         <motion.div
-        className='bg-red-600 w-full p-3 '
+        className='w-full p-3 '
         initial={{opacity:0, y:100}}
         animate={{opacity:1, y: 0}}
         transition={{duration: 0.6, delay: 0.1}}

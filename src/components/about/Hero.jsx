@@ -14,9 +14,10 @@ const Hero = () => {
   return (
     <div id='b-hero-section' className='h-screen w-full overflow-hidden'>
       <div className='size-full relative overflow-hidden flex flex-col justify-between items-center'>
-        <div className='absolute size-full bg-[url(/src/assets/images/blog-hero.jpg)] bg-cover bg-top bg-no-repeat overflow-hidden -z-1'></div>
+        <div className='absolute size-full bg-[url(/src/assets/images/about-bg.jpg)] bg-cover bg-top bg-no-repeat overflow-hidden -z-1'></div>
+        <div className='absolute size-full bg-black/40 -z-1'></div>
         <motion.div
-        className=' w-full flex justify-between pt-2'
+        className=' w-full flex justify-between pt-3! max-sm:ps-3! z-1'
         initial={{opacity: 0, y: -100}}
         animate={{ opacity: 1, y: 0}}
         transition={{duration: 0.6, delay: 0.1}}
@@ -53,44 +54,10 @@ const Hero = () => {
           </div>
         </motion.div>
         <div className=' w-full flex justify-center'>
-            <div>
-                <span className='rasa text-[50px] md:text-[80px] xl:text-[100px] text-white font-bold flex'>
-                    <motion.div
-                    initial={{opacity:0, x: '-100%'}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{duration:0.6, delay: 0.1}}
-                    >
-                        B
-                    </motion.div>
-                    <motion.div
-                    initial={{opacity:0, y: '-100%'}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration:0.6, delay: 0.1}}
-                    >
-                        L
-                    </motion.div>
-                    <motion.div
-                    initial={{opacity:0, scale:0}}
-                    animate={{opacity:1,scale:1}}
-                    transition={{duration:0.6, delay: 0.1}}
-                    >
-                        O
-                    </motion.div>
-                    <motion.div
-                    initial={{opacity:0, y: '100%'}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration:0.6, delay: 0.1}}
-                    >
-                        G
-                    </motion.div>
-                    <motion.div
-                    initial={{opacity:0, x: '100%'}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{duration:0.6, delay: 0.1}}
-                    >
-                        S
-                    </motion.div>
-                </span>
+            <div className=' flex justify-center flex-col items-center gap-2'>
+                <span className='rasa text-[30px] md:text-[50px] xl:text-[70px] text-white font-bold flex'>About : <span className='text-[#bb0573]'> Square M Reality</span></span>
+                <span className='readex text-white text-[15px] md:text-[18px] xl:text-[20px] text-center max-sm:ps-2! max-sm:pe-2! md:ps-10! md:pe-10!'> Blending creative design with engineering excellence to build spaces that stand out and stand strong.</span>
+                <a href="/contact" className='text-black! no-underline! btn-bg-clr p-2 ps-4 pe-4 rounded-full readex'>Contact Us</a>
             </div>
         </div>
         <motion.div

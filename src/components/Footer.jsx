@@ -19,7 +19,7 @@ function Footer() {
                     <nav className='footer-nav1 h-75'>
                         <ul className='d-flex w-100 h-100 justify-content-between readex list-unstyled flex-column'>
                             <li><a href="/">Home </a></li>
-                            <li><a href="">About Us </a></li>
+                            <li><a href="/about-us">About Us </a></li>
                             <li><a href="/blogs">Blogs</a></li>
                             <li><a href="/construction">Construction </a></li>
                             <li><a href="/real-estate">Real Estate </a></li>

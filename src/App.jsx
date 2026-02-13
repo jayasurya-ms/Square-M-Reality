@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import RealEstate from './pages/RealEstate';
 import Blogs from './pages/Blog';
 import BlogDetails from './components/blog/BlogDetails';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/contact' element={<Contact />} />
       <Route path='/blogs' element={<Blogs />} />
       <Route path='/blog/:slug' element={<BlogDetails />} />
+      <Route path='/about-us' element={<AboutUs />} />
     </Routes>
     </BrowserRouter>
   )

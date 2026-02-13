@@ -101,7 +101,7 @@ const BlogDetails = () => {
 
           {/* bot */}
           <div className="relative w-full">
-            <div className='flex m-4 text-white'><span><Phone color={'white'}/></span><span>1203654789</span></div>
+            <a href='tel:+918798654532' className='flex m-4 text-white no-underline!'><span><Phone color={'white'}/></span><span>1203654789</span></a>
           </div>
         </motion.div>
       </div>

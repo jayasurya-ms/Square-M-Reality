@@ -1,0 +1,36 @@
+/* 1. Change the style when the accordion is OPEN */
+.accordion-button:not(.collapsed) {
+    background-color: #F4FF49 !important; /* Your amber-500 color */
+    color: #000000 !important;           /* Text color when open */
+    box-shadow: none !important;          /* Removes default blue shadow */
+}
+
+/* 2. Remove the blue glow/outline when clicking (Focus state) */
+.accordion-button:focus {
+    box-shadow: none !important;
+    border-color: rgba(0,0,0,.125) !important;
+}
+
+/* 3. Change the color of the arrow icon when open */
+/* This makes the arrow black to contrast with the amber background */
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0); 
+}
+
+/* 4. Optional: Style the body background */
+.accordion-body {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: black;
+}
+
+/* 5. Style the item borders to be subtle */
+.accordion-item {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 6. Text color for the header when closed */
+.accordion-button {
+    background-color: transparent !important;
+    color: black !important;
+}

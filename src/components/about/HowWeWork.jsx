@@ -46,9 +46,9 @@ function HowWeWork() {
             </div>
             <div className='h-[60%] w-full flex items-start justify-center text-white'>
                 <div className=' size-[90%] flex flex-wrap ma:gap-y-10'>
-                {data.map((card) => {
+                {data.map((card, index) => {
                     return(
-                        <div className='flex flex-col w-full md:w-[50%] xl:w-[25%] h-full items-center justify-end max-sm:m-4!  md:mt-3!'>
+                        <div key={index} className='flex flex-col w-full md:w-[50%] xl:w-[25%] h-full items-center justify-end max-sm:m-4!  md:mt-3!'>
                             <div className=' w-[90%] h-[40%] flex justify-center items-center'>
                                 <span className='btn-bg-clr size-22 rounded-2xl flex justify-center items-center'>
                                     <img src={card.icon} alt="icon" className='size-10'/>

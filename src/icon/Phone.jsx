@@ -3,9 +3,9 @@ import React from 'react'
 function Phone({ color, size }) {
   return (
     <svg
-      width={size || 24}
-      height={size || 24}
-      viewBox="0 0 24 24"
+      width={size || 20}
+      height={size || 20}
+      viewBox="0 0 24 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

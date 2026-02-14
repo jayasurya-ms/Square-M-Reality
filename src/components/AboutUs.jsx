@@ -24,12 +24,12 @@ function AboutUs() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sint architecto eligendi praesentium dolores facilis dolorum incidunt ex ut. At labore laudantium, enim maxime itaque </p>
                 </div>
                 <div className='about-right3'>
-                    <Link to='' className='d-flex readex rounded-pill border-dark border-2 shadow p-2 pe-4 ps-4 align-items-center justify-content-center gap-2'>
+                    <a href='/about-us' className='d-flex readex rounded-pill border-dark border-2 shadow p-2 pe-4 ps-4 align-items-center justify-content-center gap-2'>
                         <div>Meet The Plan</div>
                         <div className='about-right3-arrow rounded-circle d-flex p-1 justify-content-center'>
                         <UpArrow size={23}/>
                         </div>
-                     </Link>
+                     </a>
                 </div>
             </div>
         </div>

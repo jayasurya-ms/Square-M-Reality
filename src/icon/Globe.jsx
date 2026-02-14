@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Globe = ({ size = 24, color = "black" }) => {
+const Globe = ({ size = 20, color = "black" }) => {
   return (
     <svg 
       width={size} 
       height={size} 
-      viewBox="0 0 24 24" 
+      viewBox="0 0 24 20" 
       fill="none" 
       stroke={color} 
       strokeWidth="2" 

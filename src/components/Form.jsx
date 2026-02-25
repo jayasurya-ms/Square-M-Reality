@@ -58,7 +58,7 @@ const Form = ({tcolor}) => {
             </div>
         ) : (
             <form ref={formRef} onSubmit={handleSubmit} method="post" className='row h-100 m-0 w-100'>
-                <div className='w-100 h-50 d-flex align-items-end col-sm-12 max-sm:w-full'>
+                <div className='w-100 max-sm:h-20 md:h-20  d-flex align-items-end col-sm-12 max-sm:w-full'>
                     <span className='tform-des max-sm:w-full'>Та борлуулсан бүтээгдэхүүн үйлчилгээнийхээ орлогоос бидэнд хувь төлөхгүй бөгөөд программ ашиглалтын суурь хураамжаа сар бүр төлөөд явах боломжтой</span>
                 </div>
                 <div className='tform-elements row w-100 h-50'>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div id='footer-section' className='w-100 h-100'>
+    <div id='footer-section' className='w-100 h-auto'>
         <div className='footer row d-flex align-items-center m-0'>
             <div className='footer1 col-md-4 col-sm-12 d-flex justify-content-between align-items-center'>
                 <div className='d-flex flex-column gap-1'>

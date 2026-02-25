@@ -1,11 +1,11 @@
 .footer{
-    height: 480px;
+    height: 380px;
     width: 100%;
     background-color: black;
 }
 .footer1, .footer2, .footer3{
     /* width: 30%; */
-    height: 80%;
+    height: 100%;
     padding: 0;
     /* background-color: aquamarine; */
 }

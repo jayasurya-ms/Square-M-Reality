@@ -75,8 +75,8 @@ const Hero = () => {
           </div>
          </div>
 
-         <div className='hero-mid2 ms-5 ps-4'>
-          <div className='text-white rasa'>
+         <div className='hero-mid2 ms-5 ps-4 pointer-events-none'>
+          <div className='text-white rasa pointer-events-none'>
             Shaping Future <br /> Through <br /> Excellence
           </div>
          </div>
